@@ -76,6 +76,59 @@ module.exports = {
           },
           items: [
             "general/staking-dashboard",
+            {
+              type: "category",
+              label: "Dune Analytics",
+              description: "Dune Analytics descriptions",
+              link: {
+                type: 'generated-index',
+                title: 'Dune Analytics',
+                description: "Dune Analytics descriptions",
+                slug: 'general/dune-analytics',
+              },
+              items: [
+                {
+                  type: "category",
+                  label: "Polkadot Dashboards",
+                  description: "Polkadot Dashboards descriptions",
+                  link: {
+                    type: 'generated-index',
+                    title: 'Polkadot Dashboards',
+                    description: "Polkadot Dashboards descriptions",
+                    slug: 'general/dune-analytics/polkadot-dashboards',
+                  },
+                  items: [
+                    "general/dune-analytics/polkadot-dashboards/polkadot-governance-dashboard",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-opengov-referendum-voting-analysis",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-staking-dashboard",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-staking-dashboard-validators",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-staking-dashboard-nominators",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-staking-dashboard-pool-member",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-staking-dashboard-nomination-pool",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-opengov-referenda-home",
+                    "general/dune-analytics/polkadot-dashboards/polkadot-dot-ordinals",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Parachain Dashboards",
+                  description: "Parachain Dashboards descriptions",
+                  link: {
+                    type: 'generated-index',
+                    title: 'Parachain Dashboards',
+                    description: "Parachain Dashboards descriptions",
+                    slug: 'general/dune-analytics/parachain-dashboards',
+                  },
+                  items: [
+                    "general/dune-analytics/parachain-dashboards/basic-metrics-dashboards",
+                    "general/dune-analytics/parachain-dashboards/assethub-dashboards",
+                    "general/dune-analytics/parachain-dashboards/interlay-dashboards",
+                    "general/dune-analytics/parachain-dashboards/unique-dashboards",
+                    "general/dune-analytics/parachain-dashboards/acala-dashboards",
+                  ],
+                },
+              ],
+            },
           ],
         },
         {
