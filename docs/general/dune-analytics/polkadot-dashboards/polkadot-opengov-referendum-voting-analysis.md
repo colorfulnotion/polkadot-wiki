@@ -9,31 +9,92 @@ slug: ../polkadot-opengov-referendum-voting-analysis
 
 # Polkadot Opengov - Referendum Voting Analysis
 
-XCM is a **language** for communicating **intentions** between **consensus systems**. Concretely,
-XCM is a message format, it specifies how to craft messages that communicate intentions to other
-consensus systems. Some examples of consensus systems are blockchains and smart contracts. XCM comes
-from the [Polkadot](https://polkadot.network/) ecosystem, but is designed to be general enough to
-provide a common format for cross-consensus communication that can be used anywhere.
+## View On Dune: [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum)
 
-Its goal is to let blockchain ecosystems thrive via specialization instead of generalization. If
-there's no interoperability, a chain is forced to host all services and support all functionalities
-on its own. With XCM, we are able to achieve an ecosystem-wide division of labour: a chain can
-specialize and focus on its own business logic, and leverage the benefits of depending on other
-specialized blockchain for services that it does not provide.
+We're using **default parameters** for all of the following parameterized charts. Visit our
+dashboard on Dune to use the **referendum_id** parameter and analyze a specific referendum.
 
-XCM makes the following assumptions regarding the underlying environment:
+Source table: **polkadot.events**, **polkadot.calls**
 
-1. Asynchronous: XCMs in no way assume that the sender will be blocking on its completion.
-2. Absolute: XCMs are assumed to be delivered and interpreted accurately, in order and in a timely
-   fashion. Once a message is sent, one can assume that it will be processed as intended. This
-   guarantee has to be provided by the transport layer.
-3. Asymmetric: XCMs, by default, do not have results that let the sender know that the message was
-   executed correctly. If results are needed, a new message must be sent.
-4. Agnostic: XCM makes no assumptions about the nature of the consensus systems between which the
-   messages are being passed. XCM should be usable in any system that derives finality through
-   consensus.
+Authored by [**@ colorfulnotion**](https://x.com/colorfulnotion)
 
-XCM is constantly evolving; the format is expected to change over time. It has an RFC process to
-propose changes, which end up in newer versions, the current one being v3. To keep up with the
-development of the format, or to propose changes, go to
-[the XCM format repository](https://github.com/paritytech/xcm-format).
+## Voting Power Daily Accumulation
+
+- Daily cumulative "Aye" and "Nay" voting powers, along with approval and support rates for a
+  specific referendum.
+- **Approval Rate** - (Conviction _ Aye token) / ((Conviction _ Aye token) + (Conviction \* Nay
+  token))
+- **Support Rate** - (Aye token + Abstain token) / Total Issuance
+- Learn more about
+  [**Opengov Support & Approval**](https://wiki.polkadot.network/docs/learn-polkadot-opengov-origins#origins-and-tracks-info)
+
+<iframe src="https://dune.com/embeds/3394377/5695923/" height="350" width="100%"></iframe>
+
+## Aye vs Nay
+
+"Aye Power" (Conviction _ Aye Token) vs "Nay Power" (Conviction _ Nay Token)
+
+<iframe src="https://dune.com/embeds/3394358/5695887/" height="350" width="100%"></iframe>
+
+## Aye votes analysis
+
+All voters who voted **AYE** for the referendum, sorted by "Voting Power" (Conviction \* Token),
+including split Aye
+
+<iframe src="https://dune.com/embeds/3394729/5696475/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3394729/5697343/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3394729/5701237/" height="350" width="100%"></iframe>
+
+## Nay votes analysis
+
+All voters who voted **NAY** for the referendum, sorted by "Voting Power" (Conviction \* Token),
+including Split NAY
+
+<iframe src="https://dune.com/embeds/3394774/5696554/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3394774/5697365/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3394774/5701248/" height="350" width="100%"></iframe>
+
+## Abstain votes analysis
+
+All voters who **Abstain** themselves for the referendum, sorted by "Voting Power" (0.1X \* Token)
+
+<iframe src="https://dune.com/embeds/3394782/5696570/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3394782/5697378/" height="350" width="100%"></iframe>
+
+## First time voter analysis
+
+A Referendum is considered hot or controversital if it has high turnout or high **First-time Voting
+Rate**
+
+- First-time voters who voted “Aye” or “Nay” in a specific referendum.
+- First-time Voting Rate: first-time voters / total voters
+
+<iframe src="https://dune.com/embeds/3395256/5697453/" height="350" width="100%"></iframe>
+
+## Voter conviction adjustment
+
+Analyze the change in voter's voting conviction for a specific referendum which offers insights into
+how voter convictions shift across referenda.
+
+## Methodology
+
+Calculates each voter's previous average conviction, compares it to their current conviction in the
+referendum, and categorizes the change as Increase 🔼, Maintain 🔁, or Decrease 🔽. Finally, it
+provides counts and percentages for each category
+
+<iframe src="https://dune.com/embeds/3397420/5701499/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3397420/5703298/" height="350" width="100%"></iframe>
+
+## Awakened Voters
+
+Enumerate the "Aye" and "Nay" voters who have not voted in the last 90 days
+
+<iframe src="https://dune.com/embeds/3399552/5705369/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3401113/5707996/" height="350" width="100%"></iframe>
