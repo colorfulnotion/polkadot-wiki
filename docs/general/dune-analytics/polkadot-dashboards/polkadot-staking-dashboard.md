@@ -9,31 +9,72 @@ slug: ../polkadot-staking-dashboard
 
 # Polkadot Staking Dashboard
 
-XCM is a **language** for communicating **intentions** between **consensus systems**. Concretely,
-XCM is a message format, it specifies how to craft messages that communicate intentions to other
-consensus systems. Some examples of consensus systems are blockchains and smart contracts. XCM comes
-from the [Polkadot](https://polkadot.network/) ecosystem, but is designed to be general enough to
-provide a common format for cross-consensus communication that can be used anywhere.
+## View On Dune: [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking)
 
-Its goal is to let blockchain ecosystems thrive via specialization instead of generalization. If
-there's no interoperability, a chain is forced to host all services and support all functionalities
-on its own. With XCM, we are able to achieve an ecosystem-wide division of labour: a chain can
-specialize and focus on its own business logic, and leverage the benefits of depending on other
-specialized blockchain for services that it does not provide.
+## Polkadot Staking Dashboard
 
-XCM makes the following assumptions regarding the underlying environment:
+**Completed Era** - completed era can have at most 2 days delay before the staking rewards & apy
+computation becomes available. The Staking Home Page is showing the most recently completed era
 
-1. Asynchronous: XCMs in no way assume that the sender will be blocking on its completion.
-2. Absolute: XCMs are assumed to be delivered and interpreted accurately, in order and in a timely
-   fashion. Once a message is sent, one can assume that it will be processed as intended. This
-   guarantee has to be provided by the transport layer.
-3. Asymmetric: XCMs, by default, do not have results that let the sender know that the message was
-   executed correctly. If results are needed, a new message must be sent.
-4. Agnostic: XCM makes no assumptions about the nature of the consensus systems between which the
-   messages are being passed. XCM should be usable in any system that derives finality through
-   consensus.
+Please note that Reward Rate and Effective Reward Rate can be volatile as erapoint varies based on
+network condition and total delegation amount are subject to
+[phragmen algo](https://wiki.polkadot.network/docs/learn-phragmen)
 
-XCM is constantly evolving; the format is expected to change over time. It has an RFC process to
-propose changes, which end up in newer versions, the current one being v3. To keep up with the
-development of the format, or to propose changes, go to
-[the XCM format repository](https://github.com/paritytech/xcm-format).
+Authored by _Stanley_, _Jerry_, and _William_ [**@ colorfulnotion**](https://x.com/colorfulnotion)
+(QA'ed: _MK_)
+
+## Rewards Rate Math
+
+**Reward Rate** - computed as (validator_erasRewardPoints/erasRewardPoints_total) \*
+ErasValidatorReward / validator_total_stake.
+
+**Effective Reward Rate** - computed as (1-validator_commision) _
+(validator_erasRewardPoints/erasRewardPoints_total) _ ErasValidatorReward / validator_total_stake -
+In other words, (1-validator_commision) \*Reward Rate, after considering validator_commision
+
+**Normalized Reward Rate** - computed as total_era_rewards / number_of_validators \* (1 -
+commission) / validator_total_stake. This metric nomoralized the reward rate across active validator
+sets
+
+## Sources
+
+Raw staking data can be found at **polkadot.stakings** table. To demonstrate how to compute and
+generate _validators_, _nominators_, _pools_, _poolmembers_ **granular metrics**, the following
+queries have been provided:
+
+- **Validators** - [**dune.substrate.result_polkadot_validators**](https://dune.com/queries/3302709)
+  (MetVeiw)
+- **Nominators** - [**dune.substrate.result_polkadot_nominators**](https://dune.com/queries/3326829)
+  (MetVeiw)
+- **Nomination Pools** -
+  [**dune.substrate.result_polkadot_nominationpools**](https://dune.com/queries/3327350) (MetVeiw)
+- **Pool Members** -
+  [**dune.substrate.result_polkadot_poolmembers**](https://dune.com/queries/3327479) (MetVeiw)
+- **On-Chain Identities** -
+  [**dune.substrate.result_polkadot_identity**](https://dune.com/queries/3420617) (MetVeiw)
+
+_Github repo_: [_**substrate-etl**_](https://github.com/colorfulnotion/substrate-etl)
+
+<iframe src="https://dune.com/embeds/3335920/5589273/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3338274/5593554/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3345583/5606404/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3338274/5817115/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3334573/5586661/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3459220/5813496/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3302959/5531365/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3303032/5531577/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3459195/5813464/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3414552/5732594/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3334817/5603258/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3334817/5587364/" height="350" width="100%"></iframe>

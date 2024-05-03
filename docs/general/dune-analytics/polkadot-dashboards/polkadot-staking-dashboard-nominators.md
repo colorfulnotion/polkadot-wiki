@@ -9,31 +9,27 @@ slug: ../polkadot-staking-dashboard-nominators
 
 # Polkadot Staking Dashboard (Nominators)
 
-XCM is a **language** for communicating **intentions** between **consensus systems**. Concretely,
-XCM is a message format, it specifies how to craft messages that communicate intentions to other
-consensus systems. Some examples of consensus systems are blockchains and smart contracts. XCM comes
-from the [Polkadot](https://polkadot.network/) ecosystem, but is designed to be general enough to
-provide a common format for cross-consensus communication that can be used anywhere.
+## View On Dune: [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking-nominators)
 
-Its goal is to let blockchain ecosystems thrive via specialization instead of generalization. If
-there's no interoperability, a chain is forced to host all services and support all functionalities
-on its own. With XCM, we are able to achieve an ecosystem-wide division of labour: a chain can
-specialize and focus on its own business logic, and leverage the benefits of depending on other
-specialized blockchain for services that it does not provide.
+We're using **default parameters** for all of the following parameterized charts. Visit our
+dashboard on Dune to use the **nominator_ss58** parameter and analyze a specific referendum.
 
-XCM makes the following assumptions regarding the underlying environment:
+For a specific nominator, this dashboard shows:
 
-1. Asynchronous: XCMs in no way assume that the sender will be blocking on its completion.
-2. Absolute: XCMs are assumed to be delivered and interpreted accurately, in order and in a timely
-   fashion. Once a message is sent, one can assume that it will be processed as intended. This
-   guarantee has to be provided by the transport layer.
-3. Asymmetric: XCMs, by default, do not have results that let the sender know that the message was
-   executed correctly. If results are needed, a new message must be sent.
-4. Agnostic: XCM makes no assumptions about the nature of the consensus systems between which the
-   messages are being passed. XCM should be usable in any system that derives finality through
-   consensus.
+- Nominator Staking Rewards
+- Nominator Shares
+- Delegated Amount
+- Nominator Staking Rewards Raw Data
 
-XCM is constantly evolving; the format is expected to change over time. It has an RFC process to
-propose changes, which end up in newer versions, the current one being v3. To keep up with the
-development of the format, or to propose changes, go to
-[the XCM format repository](https://github.com/paritytech/xcm-format).
+Source Table: **polkadot.stakings** , MaterializedView:
+[**dune.substrate.result_polkadot_nominators**](https://dune.com/queries/3326829)
+
+Go back to [**Polkadot Staking Home**](https://dune.com/substrate/polkadot-staking)
+
+<iframe src="https://dune.com/embeds/3343697/5602826/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3343697/5817852/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3459410/5813864/" height="350" width="100%"></iframe>
+
+<iframe src="https://dune.com/embeds/3343697/5817857/" height="350" width="100%"></iframe>
