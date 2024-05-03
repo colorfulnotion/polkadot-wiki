@@ -32,13 +32,13 @@ Use Ctrl+F to find all:
 
 bla bla bla bla bla bla bla bla bla bla bla bla, bla bla bla bla.
 
-![Preview screenshot 1](../../../assets/dune-analytics/DASHBOARD1_TITLE_LOWERCASE_preview_1.jpeg)
+<!-- ![Preview screenshot 1](../../../assets/dune-analytics/DASHBOARD1_TITLE_LOWERCASE_preview_1.jpeg) -->
 
 #### DASHBOARD1_DESCRIPTION2
 
 bla bla bla bla bla bla bla bla bla, bla bla bla bla.
 
-![Preview screenshot 2](../../../assets/dune-analytics/DASHBOARD1_TITLE_LOWERCASE_preview_2.jpeg)
+<!-- ![Preview screenshot 2](../../../assets/dune-analytics/DASHBOARD1_TITLE_LOWERCASE_preview_2.jpeg) -->
 
 ### DASHBOARD2_TITLE
 
@@ -48,10 +48,10 @@ bla bla bla bla bla bla bla bla bla, bla bla bla bla.
 
 blu blu blu blu blu blu blu blu blu blu, blu blu blu blu.
 
-![Preview screenshot 1](../../../assets/dune-analytics/DASHBOARD2_TITLE_LOWERCASE_preview_1.jpeg)
+<!-- ![Preview screenshot 1](../../../assets/dune-analytics/DASHBOARD2_TITLE_LOWERCASE_preview_1.jpeg) -->
 
 #### DASHBOARD2_DESCRIPTION2
 
 blu blu blu blu blu blu blu, blu blu blu blu.
 
-![Preview screenshot 2](../../../assets/dune-analytics/DASHBOARD2_TITLE_LOWERCASE_preview_2.jpeg)
+<!-- ![Preview screenshot 2](../../../assets/dune-analytics/DASHBOARD2_TITLE_LOWERCASE_preview_2.jpeg) -->
