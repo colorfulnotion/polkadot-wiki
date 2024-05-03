@@ -13,8 +13,6 @@ slug: ../assethub-dashboards
 
 ## Dashboards
 
-List of Dashboards:
-
 - [AssetHub](#AssetHub)
 
 ### AssetHub
