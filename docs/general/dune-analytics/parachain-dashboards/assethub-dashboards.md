@@ -9,31 +9,42 @@ slug: ../assethub-dashboards
 
 # AssetHub Dashboards
 
-XCM is a **language** for communicating **intentions** between **consensus systems**. Concretely,
-XCM is a message format, it specifies how to craft messages that communicate intentions to other
-consensus systems. Some examples of consensus systems are blockchains and smart contracts. XCM comes
-from the [Polkadot](https://polkadot.network/) ecosystem, but is designed to be general enough to
-provide a common format for cross-consensus communication that can be used anywhere.
+## See All Dashboards On Dune: [AssetHub Dashboards](https://dune.com/discover/content/relevant?q=title:AssetHub%20author:substrate)
 
-Its goal is to let blockchain ecosystems thrive via specialization instead of generalization. If
-there's no interoperability, a chain is forced to host all services and support all functionalities
-on its own. With XCM, we are able to achieve an ecosystem-wide division of labour: a chain can
-specialize and focus on its own business logic, and leverage the benefits of depending on other
-specialized blockchain for services that it does not provide.
+## Dashboards
 
-XCM makes the following assumptions regarding the underlying environment:
+List of Dashboards:
 
-1. Asynchronous: XCMs in no way assume that the sender will be blocking on its completion.
-2. Absolute: XCMs are assumed to be delivered and interpreted accurately, in order and in a timely
-   fashion. Once a message is sent, one can assume that it will be processed as intended. This
-   guarantee has to be provided by the transport layer.
-3. Asymmetric: XCMs, by default, do not have results that let the sender know that the message was
-   executed correctly. If results are needed, a new message must be sent.
-4. Agnostic: XCM makes no assumptions about the nature of the consensus systems between which the
-   messages are being passed. XCM should be usable in any system that derives finality through
-   consensus.
+- [AssetHub](#AssetHub)
 
-XCM is constantly evolving; the format is expected to change over time. It has an RFC process to
-propose changes, which end up in newer versions, the current one being v3. To keep up with the
-development of the format, or to propose changes, go to
-[the XCM format repository](https://github.com/paritytech/xcm-format).
+### AssetHub
+
+**View On Dune**: [AssetHub](https://dune.com/substrate/assethub)
+
+#### AssetHub for Polkadot
+
+AssetHub is the Polkadot system chain where Major Stablecoins (USDT, USDC) are minted by Tether +
+Circle, as well as the home of [DED](https://dune.com/substrate/dotisded), PINK and DOTA. Some NFTs
+are minted on AssetHub (e.g. by [Kodadot](https://kodadot.xyz/)).
+
+#### Asset Conversion Pallet
+
+In late April, AssetHub added the AssetConversion pallet, supporting DOT/USDT + DOT/USDC trading as
+well as trading of DED, PINK and DOTA
+
+This dashboard shows recent Stablecoin + NFT activity on AssetHub for Polkadot.
+
+![Preview screenshot 1](../../../assets/dune-analytics/assethub_preview_1.jpeg)
+
+#### AssetHub USDC+USDT Activity
+
+- 1337 - USDC is minted by Circle
+- 1984 - USDT is minted by Tether
+
+![Preview screenshot 2](../../../assets/dune-analytics/assethub_preview_2.jpeg)
+
+#### AssetHub NFT Activity
+
+The following charts show "nfts" pallet activity of "buyItem" and "mint".
+
+![Preview screenshot 3](../../../assets/dune-analytics/assethub_preview_3.jpeg)
