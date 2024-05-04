@@ -32,7 +32,7 @@ value proportions.
 
 ![Acala on Polkadot](../../../assets/dune-analytics/acala-on-polkadot_preview_1.jpeg)
 
-## Transaction Summary by Assets
+#### Transaction Summary by Assets
 
 Use the parameter widget to select multiple or single assets and view their summary by month.
 
@@ -44,10 +44,10 @@ selected** in the parameter widget.
 
 ![Acala on Polkadot](../../../assets/dune-analytics/acala-on-polkadot_preview_2.jpeg)
 
-## Asset Exchange Rate on Acala
+#### Asset Exchange Rate on Acala
 
 ![Acala on Polkadot](../../../assets/dune-analytics/acala-on-polkadot_preview_3.jpeg)
 
-## Miscellaneous
+#### Miscellaneous
 
 ![Acala on Polkadot](../../../assets/dune-analytics/acala-on-polkadot_preview_4.jpeg)
