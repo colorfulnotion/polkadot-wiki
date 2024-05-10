@@ -1,73 +1,83 @@
 ---
-id: acala-dashboards
-title: Acala Dashboards
-sidebar_label: Acala Dashboards
+id: moonbeam-dashboards
+title: Moonbeam Dashboards
+sidebar_label: Moonbeam Dashboards
 description:
-  Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain liquidity
-  and applications. It serves as a critical infrastructure layer for the Polkadot ecosystem.
-keywords: [polkadot, dashboard, dune, acala, DeFi]
-slug: ../acala-dashboards
+  Moonbeam is a fully Ethereum-compatible parachain on the Polkadot network, enabling developers to
+  deploy existing Solidity smart contracts and DApp frontends with minimal changes. It is designed
+  to provide interoperability and compatibility, bridging the gap between Ethereum and Polkadot.
+keywords: [polkadot, dashboard, dune, moonbeam, Ethereum]
+slug: ../moonbeam-dashboards
 ---
 
-# Acala Dashboards
+# Moonbeam Dashboards
 
 ## Overview
 
-Acala is a decentralized finance hub and stablecoin platform powering cross-blockchain liquidity and
-applications. It serves as a critical infrastructure layer for the Polkadot ecosystem.
+Moonbeam is a fully Ethereum-compatible parachain on the Polkadot network, enabling developers to
+deploy existing Solidity smart contracts and DApp frontends with minimal changes. It is designed to
+provide interoperability and compatibility, bridging the gap between Ethereum and Polkadot.
 
 ## Featured Dashboards on Dune
 
-Here you'll find a variety of dashboards that help visualize data from the Acala parachain:
+Here you'll find a variety of dashboards that help visualize data from the Moonbeam parachain:
 
-- [Acala on Polkadot](https://dune.com/substrate/acala): This dashboard provides a comprehensive
-  view of financial activities and token dynamics within the Acala network.
+- [Moonbeam DEX](https://dune.com/substrate/moonbeam-dex): Explore decentralized exchange activities
+  and token swaps within the Moonbeam ecosystem.
+- [Moonbeam Governance](https://dune.com/substrate/moonbeam-governance): Detailed insights into
+  governance proposals, voting, and outcomes within the Moonbeam community.
 
 ## Key Tables
 
-Data from the Acala parachain is organized into several key tables: `acala.balances`,
-`acala.blocks`, `acala.calls`, `acala.events`, `acala.extrinsics`, `acala.transfers`
+Data from the Moonbeam parachain is organized into several key tables: `moonbeam.balances`,
+`moonbeam.blocks`, `moonbeam.calls`, `moonbeam.events`, `moonbeam.extrinsics`, `moonbeam.transfers`
 
 ## Useful Queries
 
-Currently, there are no specific queries provided. Please check back later for updates.
+Currently, there are no specific useful queries provided. Please check back later as this section
+will be updated with materialized queries for Moonbeam.
 
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized
 queries. You can use the following DuneSQL queries as examples:
 
-```sql title="Acala List of Assets" showLineNumbers
-WITH
-    decimals_for_each_symbol AS (
-            SELECT
-                symbol,
-                MAX(decimals) AS decimals
-            FROM
-                acala.transfers
-            WHERE
-                symbol IS NOT NULL
-            GROUP BY
-                symbol
-        )
-SELECT
-    b.asset,
-    b.symbol,
-    d.decimals
+```sql title="Moonbeam Referenda Result" showLineNumbers
+SELECT DISTINCT
+  CAST(JSON_EXTRACT_SCALAR(data, '$[0]') as INTEGER) as referenda_id,
+  get_href (
+    'https://moonbeam.subscan.io/referenda_v2/' || cast(JSON_EXTRACT_SCALAR(data, '$[0]') as VARCHAR),
+    cast(JSON_EXTRACT_SCALAR(data, '$[0]') as VARCHAR)
+  ) as referenda_id_url,
+  varbinary_to_uint256 (
+    from_hex(SUBSTR(JSON_EXTRACT_SCALAR(data, '$[1].ayes'), 3))
+  ) / pow(10, 18) as aye_total,
+  varbinary_to_uint256 (
+    from_hex(SUBSTR(JSON_EXTRACT_SCALAR(data, '$[1].nays'), 3))
+  ) / pow(10, 18) as nay_total,
+  varbinary_to_uint256 (
+    from_hex(
+      SUBSTR(JSON_EXTRACT_SCALAR(data, '$[1].support'), 3)
+    )
+  ) / pow(10, 18) as support,
+  method as result
 FROM
-    acala.balances b
-LEFT JOIN decimals_for_each_symbol d ON b.symbol = d.symbol
-GROUP BY
-    b.asset,
-    b.symbol,
-    d.decimals
+  moonbeam.events
+WHERE
+  section = 'referenda'
+  and (
+    method = 'Confirmed'
+    or method = 'Rejected'
+    or method = 'Cancelled'
+    or method = 'TimedOut'
+  )
 ORDER BY
-    SUM(b.free + b.reserved + b.misc_frozen + b.frozen) DESC
+  referenda_id DESC
 ```
 
 Query result:
 
-<iframe src="https://dune.com/embeds/3670410/6172755/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3679042/6187736/" height="350" width="100%"></iframe>
 
 ## DuneSQL
 

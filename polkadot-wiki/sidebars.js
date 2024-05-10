@@ -122,9 +122,10 @@ module.exports = {
                   items: [
                     "general/dune-analytics/parachain-dashboards/basic-metrics-dashboards",
                     "general/dune-analytics/parachain-dashboards/assethub-dashboards",
-                    "general/dune-analytics/parachain-dashboards/interlay-dashboards",
                     "general/dune-analytics/parachain-dashboards/unique-dashboards",
+                    "general/dune-analytics/parachain-dashboards/moonbeam-dashboards",
                     "general/dune-analytics/parachain-dashboards/acala-dashboards",
+                    // "general/dune-analytics/parachain-dashboards/interlay-dashboards",
                   ],
                 },
               ],
