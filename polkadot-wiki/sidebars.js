@@ -128,6 +128,7 @@ module.exports = {
                     // "general/dune-analytics/parachain-dashboards/interlay-dashboards",
                   ],
                 },
+                "general/dune-analytics/dunesql-cheatsheet",
               ],
             },
           ],
