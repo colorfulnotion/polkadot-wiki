@@ -76,7 +76,7 @@ functions and syntax are similar to standard SQL, there are still some differenc
 versions of SQL. Below is a comparison table of common features between DuneSQL and Google BigQuery
 SQL.
 
-:::info For more information on DuneSQL, please refer to the
+::: info For more information on DuneSQL, please refer to the
 [DuneSQL documentation](https://docs.dune.com/query-engine/Functions-and-operators/index). :::
 
 | Problem Type                                | BigQuery                                                                                                                                                                                                              | DuneSQL(V2)                                                                                                                                                  | Description                                                                                                                                      |
