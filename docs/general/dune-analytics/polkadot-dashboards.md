@@ -1,0 +1,114 @@
+---
+id: polkadot-dashboards
+title: Polkadot Dashboards
+sidebar_label: Polkadot Dashboards
+description:
+  Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized
+  web where users are in control. It is a sharded multichain network, meaning it can process many
+  transactions on several chains in parallel, improving scalability.
+keywords: [polkadot, dashboard, dune, governance, staking, NFT]
+slug: ../polkadot-dashboards
+---
+
+# Polkadot Dashboards
+
+## Overview
+
+Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized web
+where users are in control. It is a sharded multichain network, meaning it can process many
+transactions on several chains in parallel, improving scalability.
+
+## Featured Dashboards on Dune
+
+Here you'll find a variety of dashboards that help visualize data from the Polkadot network:
+
+- [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov): Explore the governance
+  mechanism within Polkadot including proposals and voting patterns.
+- [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum):
+  Detailed insights into the referendum voting process and outcomes.
+- [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking): Overview of staking
+  dynamics and distribution across the network.
+- [Polkadot Staking Dashboard (Validators) 💰](https://dune.com/substrate/polkadot-staking-validators):
+  Analyze validator performance and statistics.
+- [Polkadot Staking Dashboard (Nominators) 💰](https://dune.com/substrate/polkadot-staking-nominators):
+  Insights into nominator contributions and rewards.
+- [Polkadot Staking Dashboard (Pool Member) 💰](https://dune.com/substrate/polkadot-staking-pool-member):
+  Data on staking pools and individual member activity.
+- [Polkadot Staking Dashboard (Nomination Pool) 💰](https://dune.com/substrate/polkadot-staking-nomination-pool):
+  Detailed view of nomination pools and their performance.
+- [Polkadot OpenGov Referenda - Home](https://dune.com/substrate/polkadot-opengov-active-referenda):
+  Current and historical data on referenda.
+- [DOT Ordinals](https://dune.com/substrate/dot-ordinals): Examination of DOT ordinal metrics and
+  trends.
+
+## Key Tables
+
+Data from the Polkadot network is organized into several key tables: `polkadot.balances`,
+`polkadot.blocks`, `polkadot.calls`, `polkadot.events`, `polkadot.extrinsics`, `polkadot.transfers`
+
+## Useful Queries
+
+Here are **materialized** queries for Polkadot that may be useful to build your own charts:
+
+- [polkadot_validator](https://dune.com/queries/3302709)
+  (`dune.substrate.result_polkadot_validators`)
+- [polkadot_nominationpools](https://dune.com/queries/3327350)
+  (`dune.substrate.result_polkadot_nominationpools`)
+- [polkadot_nominators](https://dune.com/queries/3326829)
+  (`dune.substrate.result_polkadot_nominators`)
+- [polkadot_poolmembers](https://dune.com/queries/3327479)
+  (`dune.substrate.result_polkadot_poolmembers`)
+- [polkadot_identity](https://dune.com/queries/3420617) (`dune.substrate.result_polkadot_identity`)
+- [Polkadot Referenda Total Voting Power](https://dune.com/queries/3394422)
+  (`dune.substrate.result_polkadot_referenda_total_voting_power`)
+- [Polkadot Staking Nomination Total](https://dune.com/queries/3426963)
+  (`dune.substrate.result_polkadot_staking_nomination_total`)
+- [Polkadot OpenGov Delegation](https://dune.com/queries/3393179)
+  (`dune.substrate.result_polkadot_open_gov_delegation`)
+- [Polkadot Vote Record](https://dune.com/queries/3415321)
+  (`dune.substrate.result_polkadot_vote_record`)
+- [Polkadot Proposals proposed](https://dune.com/queries/3394156)
+  (`dune.substrate.result_polkadot_proposals_proposed`)
+- [Polkadot Referenda Direct Vote](https://dune.com/queries/3391225)
+  (`dune.substrate.result_polkadot_referenda_direct_vote`)
+- [Polkadot Each Vote Record](https://dune.com/queries/3393684)(`dune.substrate.result_polkadot_each_vote_record`)
+- [Polkdaot Referenda Origin Map](https://dune.com/queries/3399352)(`dune.substrate.result_polkdaot_referenda_origin_map`)
+- [Polkadot Failed calls in batch](https://dune.com/queries/3457139)(`dune.substrate.result_polkadot_failed_calls_in_batch`)
+
+## Getting Started with Queries
+
+To get started with querying data from Unique, you are welcome to use the mentioned materialized
+queries. You can use the following DuneSQL queries as examples:
+
+```sql title="Polkadot Staking APR (Normalized)" showLineNumbers
+SELECT
+  AVG(validator_normalized_staking_apr) AS staking_apr,
+  era,
+  DATE_FORMAT(ts, '%Y-%m-%d') AS era_ts
+FROM dune.substrate.result_polkadot_validators
+WHERE
+  validator_is_active = TRUE AND validator_commission <> 1
+GROUP BY
+  era,
+  ts
+HAVING
+  AVG(validator_normalized_staking_apr) > 0
+ORDER BY
+  era DESC
+```
+
+Query result:
+
+<iframe src="https://dune.com/embeds/3303109/5531719/" height="350" width="100%"></iframe>
+
+Visualized result:
+
+<iframe src="https://dune.com/embeds/3303109/5531727/" height="350" width="100%"></iframe>
+
+:::info DuneSQL Referece
+
+For more information on DuneSQL, please refer to the [DuneSQL Cheatsheet](../dunesql-cheatsheet.md)
+and
+[DuneSQL Official Documentation](https://docs.dune.com/query-engine/Functions-and-operators/index).
+
+:::

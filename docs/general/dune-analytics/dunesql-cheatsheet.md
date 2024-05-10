@@ -3,9 +3,10 @@ id: dunesql-cheatsheet
 title: DuneSQL Cheatsheet
 sidebar_label: DuneSQL Cheatsheet
 description:
-  Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections. It
-  provides a robust framework for users and developers to engage with non-fungible tokens across
-  different applications.
+  It is important to note that when querying on Dune Analytics, DuneSQL is employed. Although most
+  functions and syntax are similar to standard SQL, there are still some differences compared to
+  other versions of SQL. Below is a comparison table of common features between DuneSQL and Google
+  BigQuery SQL.
 keywords: [polkadot, dashboard, dune, sql, dunesql]
 slug: ../dunesql-cheatsheet
 ---
