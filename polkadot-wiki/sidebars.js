@@ -87,6 +87,7 @@ module.exports = {
                 slug: 'general/dune-analytics',
               },
               items: [
+                "general/dune-analytics/basic-metrics-dashboards",
                 "general/dune-analytics/polkadot-dashboards",
                 // {
                 //   type: "category",
@@ -121,7 +122,6 @@ module.exports = {
                     slug: 'general/dune-analytics/parachain-dashboards',
                   },
                   items: [
-                    "general/dune-analytics/parachain-dashboards/basic-metrics-dashboards",
                     "general/dune-analytics/parachain-dashboards/assethub-dashboards",
                     "general/dune-analytics/parachain-dashboards/unique-dashboards",
                     "general/dune-analytics/parachain-dashboards/moonbeam-dashboards",
