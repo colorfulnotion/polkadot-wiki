@@ -15,7 +15,7 @@ the input field at the top, making it a versatile tool for monitoring and analyz
 performance.
 
 **View On Dune**:
-[Substrate Parachain Basic Metrics](https://dune.com/substrate/parachain-basic-metrics)
+[Substrate Parachain Basic Metrics](https://dune.com/substrate/substrate-parachain-basic-metrics)
 
 :::tip
 
