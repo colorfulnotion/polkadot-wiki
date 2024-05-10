@@ -2,45 +2,91 @@
 id: unique-dashboards
 title: Unique Dashboards
 sidebar_label: Unique Dashboards
-description: Unique Dashboards descriptions
-keywords: [polkadot, governance, dashboard, dune]
-slug: ../uqniue-dashboards
+description:
+  Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections. It
+  provides a robust framework for users and developers to engage with non-fungible tokens across
+  different applications.
+keywords: [polkadot, dashboard, dune, unique, NFT]
+slug: ../unique-dashboards
 ---
 
 # Unique Dashboards
 
-## See All Dashboards On Dune: [Unique Dashboards](https://dune.com/discover/content/relevant?q=title:Unique%20author:substrate)
+## Overview
 
-## Dashboards
+Unique is a leading parachain on Polkadot dedicated to enabling NFTs and their collections. It
+provides a robust framework for users and developers to engage with non-fungible tokens across
+different applications.
 
-- [Unique NFT Dashboard](#unique-nft-dashboard)
-- [Unique Collection Details Dashboard](#unique-collection-details-dashboard)
+## Featured Dashboards on Dune
 
-### Unique NFT Dashboard
+Here you'll find a variety of dashboards that help visualize data from the Unique parachain:
 
-**View On Dune**: [Unique NFT Dashboard](https://dune.com/substrate/unique-nft-dashboard)
+- [Unique NFT Dashboard](https://dune.com/substrate/unique-nft-dashboard): A comprehensive view of
+  NFT activities within the Unique parachain.
+- [Unique Collection Details Dashboard](https://dune.com/substrate/unique-collection-details):
+  Detailed insights into specific NFT collections.
 
-![Unique NFT Dashboard](../../../assets/dune-analytics/unique-nft-dashboard_preview.jpeg)
+Please also visit our dashboards for Unique on
+[Dune Analytics](https://dune.com/discover/content/relevant?q=title:Unique%20author:substrate).
 
-### Unique Collection Details Dashboard
+## Key Tables
 
-**View On Dune**:
-[Unique Collection Details Dashboard](https://dune.com/substrate/unique-collection-details)
+Data from the Unique parachain is organized into several key tables: `unique.balances`,
+`unique.blocks`, `unique.calls`, `unique.events`, `unique.extrinsics`, `unique.transfers`
 
-#### Collection Basic Information
+## Useful Queries
 
-![Unique Collection Details Dashboard](../../../assets/dune-analytics/unique-collection-details-dashboard_preview_1.jpeg)
+Here are **materialized** queries for Unique that may be useful to build your own charts:
 
-#### NFT Creation
+- [Unique ss58 and pubkey Maping Table](https://dune.com/queries/3632470)
+  (`dune.substrate.result_unique_ss58_pubkey_maping`)
+- [Unique NFT Info](https://dune.com/queries/3630265) (`dune.substrate.result_unique_nft_info`)
+- [Unique Collection Info](https://dune.com/queries/3628043)
+  (`dune.substrate.result_unique_collection_info`)
+- [Unique NFT Transaction Info](https://dune.com/queries/3631785)
+  (`dune.substrate.result_unique_nft_transaction_info`)
 
-Click Extrinsic ID, Collection ID, or NFT Name for further information on Subscan and UniqueScan.
+## Getting Started with Queries
 
-![Unique Collection Details Dashboard](../../../assets/dune-analytics/unique-collection-details-dashboard_preview_2.jpeg)
+To get started with querying data from Unique, you are welcome to use the mentioned materialized
+queries. You can use the following DuneSQL queries as examples:
 
-#### Transaction Information
+```sql title="Unique Top Collections by Total Sales Amount" showLineNumbers
+SELECT
+  collection_id_with_dashboard_url,
+  token_prefix,
+  SUM(for_price) AS total_amount
+FROM
+  dune.substrate.result_unique_nft_transaction_info
+GROUP BY
+  collection_id_with_dashboard_url,
+  token_prefix
+ORDER BY
+  SUM(for_price) DESC
+```
 
-![Unique Collection Details Dashboard](../../../assets/dune-analytics/unique-collection-details-dashboard_preview_3.jpeg)
+Query result:
 
-#### Miscellaneous
+<iframe src="https://dune.com/embeds/3632384/6118455/c4199fa9-3227-4688-90f1-81f0fc60db31" height="350" width="100%"></iframe>
 
-![Unique Collection Details Dashboard](../../../assets/dune-analytics/unique-collection-details-dashboard_preview_4.jpeg)
+## DuneSQL
+
+It is important to note that when querying on Dune Analytics, DuneSQL is employed. Although most
+functions and syntax are similar to standard SQL, there are still some differences compared to other
+versions of SQL. Below is a comparison table of common features between DuneSQL and Google BigQuery
+SQL.
+
+:::info For more information on DuneSQL, please refer to the
+[DuneSQL documentation](https://docs.dune.com/query-engine/Functions-and-operators/index). :::
+
+| Problem Type                                | BigQuery                                                                                                                                                                                                              | DuneSQL(V2)                                                                                                                                                  | Description                                                                                                                                      |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| JSON Reading Method                         | `JSON_EXTRACT_SCALAR(call_args, "$.remark")`                                                                                                                                                                          | `JSON_EXTRACT_SCALAR(JSON_PARSE(call_args), '$.remark')`                                                                                                     | In DuneSQL, `JSON_PARSE` is needed to split the JSON if it is initially not in JSON format but is transformed into a JSON string.                |
+| JSON array to SQL array                     | `JSON_EXTRACT_ARRAY(JSON_EXTRACT(pv, '$.others'))`                                                                                                                                                                    | `cast(json_extract(pv, '$.others') as array<json>)`                                                                                                          | BigQuery uses a function for this conversion, while DuneSQL utilizes casting and supports the JSON data type.                                    |
+| HEX to UTF8                                 | `SAFE_CONVERT_BYTES_TO_STRING(FROM_HEX(SUBSTR(hex_encode, 3)))`                                                                                                                                                       | `FROM_UTF8(from_hex(SUBSTR(hex_encode, 3)))`                                                                                                                 | In DuneSQL, the `SAFE_CONVERT_BYTES_TO_STRING` is not required.                                                                                  |
+| Time Axis                                   | `TIMESTAMP_TRUNC(block_time, DAY) >= TIMESTAMP("2023-12-01")`                                                                                                                                                         | `block_time >= date('2023-12-01')`                                                                                                                           | Time conversion in DuneSQL is simpler, involving direct usage of `variable operator date(value)`.                                                |
+| Data Type Conversion (FLOAT64 to DOUBLE)    | `CAST(JSON_EXTRACT_SCALAR(nominationpools_rewardpools, '$.lastRecordedRewardCounter') AS FLOAT64)`                                                                                                                    | `CAST(JSON_EXTRACT_SCALAR(nominationpools_rewardpools, '$.lastRecordedRewardCounter')`                                                                       | BigQuery refers to the data format as FLOAT64, while in DuneSQL, it is termed DOUBLE.                                                            |
+| Handling Null Values                        | `IFNULL(prev_member_bonded, 0)`                                                                                                                                                                                       | `COALESCE(prev_member_bonded, 0)`                                                                                                                            | In DuneSQL, BigQuery's `IFNULL` is equivalent to `COALESCE`.                                                                                     |
+| Calculating Local Time and Subtracting Days | `TIMESTAMP_TRUNC(ts, DAY) >= TIMESTAMP(DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY))`                                                                                                                                    | `ts >= date(current_date - interval '30' day)`                                                                                                               | In BigQuery, operations on dates require functions, but DuneSQL allows direct use of `+` and `-`.                                                |
+| Using Hyperlinks in Tables                  | `SELECT concat(concat(concat("<a href='https://analytics.polkaholic.io/superset/dashboard/77/?account=", address_ss58), "'>"), if(address_name is null, concat(address_ss58, '</a>'), concat(address_name, '</a>')))` | `CONCAT('<a target="_new" href="https://analytics.polkaholic.io/superset/dashboard/77/?account=', address_ss58, '">', address_ss58 ,'</a>') AS address_ss58` | DuneSQL enables string concatenation using `CONCAT`, making it straightforward compared to the multiple `concat` functions required in BigQuery. |
