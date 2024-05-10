@@ -22,8 +22,20 @@ transactions on several chains in parallel, improving scalability.
 
 Here you'll find a variety of dashboards that help visualize data from the Polkadot network:
 
-- [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov): Explore the governance
-  mechanism within Polkadot including proposals and voting patterns.
+- [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov): The _Polkadot Governance
+  Dashboard_ provides a clear and concise representation of the
+  [network's governance](https://wiki.polkadot.network/docs/en/learn-governance) activities. It
+  serves as a useful tool for community members to observe
+  [treasury management](https://wiki.polkadot.network/docs/en/learn-treasury),
+  [referendum outcomes](https://wiki.polkadot.network/docs/en/learn-governance#referenda), and
+  voting patterns. This dashboard aims to enhance community engagement by simplifying access to
+  governance information and fostering a transparent decision-making environment.
+- [Polkadot OpenGov Referenda - Home](https://dune.com/substrate/polkadot-opengov-active-referenda):
+  This dashboard is designed for those who wish to vote, allowing them to quickly understand the
+  current trend in Polkadot OpenGov and proceed to vote on
+  [Polkassembly](https://polkadot.polkassembly.io/opengov). If you want to see more details of each
+  referendum, please check
+  [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum).
 - [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum):
   Detailed insights into the referendum voting process and outcomes.
 - [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking): Overview of staking
@@ -36,8 +48,6 @@ Here you'll find a variety of dashboards that help visualize data from the Polka
   Data on staking pools and individual member activity.
 - [Polkadot Staking Dashboard (Nomination Pool) 💰](https://dune.com/substrate/polkadot-staking-nomination-pool):
   Detailed view of nomination pools and their performance.
-- [Polkadot OpenGov Referenda - Home](https://dune.com/substrate/polkadot-opengov-active-referenda):
-  Current and historical data on referenda.
 - [DOT Ordinals](https://dune.com/substrate/dot-ordinals): Examination of DOT ordinal metrics and
   trends.
 
@@ -50,15 +60,6 @@ Data from the Polkadot network is organized into several key tables: `polkadot.b
 
 Here are **materialized** queries for Polkadot that may be useful to build your own charts:
 
-- [polkadot_validator](https://dune.com/queries/3302709)
-  (`dune.substrate.result_polkadot_validators`)
-- [polkadot_nominationpools](https://dune.com/queries/3327350)
-  (`dune.substrate.result_polkadot_nominationpools`)
-- [polkadot_nominators](https://dune.com/queries/3326829)
-  (`dune.substrate.result_polkadot_nominators`)
-- [polkadot_poolmembers](https://dune.com/queries/3327479)
-  (`dune.substrate.result_polkadot_poolmembers`)
-- [polkadot_identity](https://dune.com/queries/3420617) (`dune.substrate.result_polkadot_identity`)
 - [Polkadot Referenda Total Voting Power](https://dune.com/queries/3394422)
   (`dune.substrate.result_polkadot_referenda_total_voting_power`)
 - [Polkadot Staking Nomination Total](https://dune.com/queries/3426963)
@@ -74,6 +75,15 @@ Here are **materialized** queries for Polkadot that may be useful to build your 
 - [Polkadot Each Vote Record](https://dune.com/queries/3393684)(`dune.substrate.result_polkadot_each_vote_record`)
 - [Polkdaot Referenda Origin Map](https://dune.com/queries/3399352)(`dune.substrate.result_polkdaot_referenda_origin_map`)
 - [Polkadot Failed calls in batch](https://dune.com/queries/3457139)(`dune.substrate.result_polkadot_failed_calls_in_batch`)
+- [polkadot_validator](https://dune.com/queries/3302709)
+  (`dune.substrate.result_polkadot_validators`)
+- [polkadot_nominationpools](https://dune.com/queries/3327350)
+  (`dune.substrate.result_polkadot_nominationpools`)
+- [polkadot_nominators](https://dune.com/queries/3326829)
+  (`dune.substrate.result_polkadot_nominators`)
+- [polkadot_poolmembers](https://dune.com/queries/3327479)
+  (`dune.substrate.result_polkadot_poolmembers`)
+- [polkadot_identity](https://dune.com/queries/3420617) (`dune.substrate.result_polkadot_identity`)
 
 ## Getting Started with Queries
 
