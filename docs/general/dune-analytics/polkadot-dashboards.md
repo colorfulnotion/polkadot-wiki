@@ -22,6 +22,12 @@ transactions on several chains in parallel, improving scalability.
 
 Here you'll find a variety of dashboards that help visualize data from the Polkadot network:
 
+### Governance
+
+Explore Polkadot's governance through dashboards detailing proposal submissions, referenda outcomes,
+and voting behaviors. These tools highlight the decentralized decision-making process and its
+efficacy.
+
 - [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov): The _Polkadot Governance
   Dashboard_ provides a clear and concise representation of the
   [network's governance](https://wiki.polkadot.network/docs/en/learn-governance) activities. It
@@ -38,6 +44,15 @@ Here you'll find a variety of dashboards that help visualize data from the Polka
   [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum).
 - [Polkadot Opengov - Referendum Voting Analysis](https://dune.com/substrate/polkadot-referendum):
   Detailed insights into the referendum voting process and outcomes.
+
+### Staking
+
+Dive into the staking ecosystem with dashboards that analyze validator performance, nominator
+contributions, and staking distributions. For a deeper understanding of Polkadot's staking mechanism
+and to optimize your staking strategies, visit the
+[official staking mechanism documentation](https://wiki.polkadot.network/docs/learn-staking) and the
+[staking web app documentation](https://wiki.polkadot.network/docs/staking-dashboard).
+
 - [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking): Overview of staking
   dynamics and distribution across the network.
 - [Polkadot Staking Dashboard (Validators) 💰](https://dune.com/substrate/polkadot-staking-validators):
@@ -48,6 +63,13 @@ Here you'll find a variety of dashboards that help visualize data from the Polka
   Data on staking pools and individual member activity.
 - [Polkadot Staking Dashboard (Nomination Pool) 💰](https://dune.com/substrate/polkadot-staking-nomination-pool):
   Detailed view of nomination pools and their performance.
+
+### Miscellaneous
+
+Discover diverse aspects of Polkadot through Miscellaneous dashboards, which provide insights into
+DOT ordinals and other unique network activities. Ideal for uncovering trends in the broader
+ecosystem.
+
 - [DOT Ordinals](https://dune.com/substrate/dot-ordinals): Examination of DOT ordinal metrics and
   trends.
 
