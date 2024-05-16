@@ -19,10 +19,10 @@ performance.
 
 :::tip
 
-We're using **default parameters** for all of the parameterized charts on this Wiki page as a
-demonstration. Visit our dashboard on Dune to use the `chain` parameter and analyze specific
-relay-chains or parachains. For further details, please visit the
-[Dune documentation about parameters](https://docs.dune.com/web-app/query-editor/parameters).
+**Default parameters** are applied to all parameterized charts on this Wiki page as a demonstration.
+Visit our dashboard on Dune to use the `chain` parameter for more in-depth analysis. For more
+information, please visit the
+[Dune documentation on parameters](https://docs.dune.com/web-app/query-editor/parameters).
 
 :::
 

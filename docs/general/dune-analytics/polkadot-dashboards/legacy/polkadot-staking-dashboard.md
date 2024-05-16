@@ -28,8 +28,8 @@ Authored by _Stanley_, _Jerry_, and _William_ [**@ colorfulnotion**](https://x.c
 **Reward Rate** - computed as (validator_erasRewardPoints/erasRewardPoints_total) \*
 ErasValidatorReward / validator_total_stake.
 
-**Effective Reward Rate** - computed as (1-validator_commision) _
-(validator_erasRewardPoints/erasRewardPoints_total) _ ErasValidatorReward / validator_total_stake -
+**Effective Reward Rate** - computed as (1-validator*commision) *
+(validator*erasRewardPoints/erasRewardPoints_total) * ErasValidatorReward / validator_total_stake -
 In other words, (1-validator_commision) \*Reward Rate, after considering validator_commision
 
 **Normalized Reward Rate** - computed as total_era_rewards / number_of_validators \* (1 -
