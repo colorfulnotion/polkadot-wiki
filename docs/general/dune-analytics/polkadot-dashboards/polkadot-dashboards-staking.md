@@ -37,21 +37,16 @@ available. The Staking Home Page shows the most recently completed era.
 - **Normalized Reward Rate**: total_era_rewards / number_of_validators \* (1 - commission) /
   validator_total_stake.
 
-### Sources
-
-- Raw staking data: **polkadot.stakings** table.
-- Validators: [**dune.substrate.result_polkadot_validators**](https://dune.com/queries/3302709)
-  (MetView)
-- Nominators: [**dune.substrate.result_polkadot_nominators**](https://dune.com/queries/3326829)
-  (MetView)
-- Nomination Pools:
-  [**dune.substrate.result_polkadot_nominationpools**](https://dune.com/queries/3327350) (MetView)
-- Pool Members: [**dune.substrate.result_polkadot_poolmembers**](https://dune.com/queries/3327479)
-  (MetView)
-- On-Chain Identities:
-  [**dune.substrate.result_polkadot_identity**](https://dune.com/queries/3420617) (MetView)
+Source Table: **polkadot.stakings**, MaterializedView:
+[**dune.substrate.result_polkadot_validators**](https://dune.com/queries/3302709),
+[**dune.substrate.result_polkadot_nominators**](https://dune.com/queries/3326829),
+[**dune.substrate.result_polkadot_nominationpools**](https://dune.com/queries/3327350),
+[**dune.substrate.result_polkadot_poolmembers**](https://dune.com/queries/3327479),
+[**dune.substrate.result_polkadot_identity**](https://dune.com/queries/3420617)
 
 _Github repo_: [_**substrate-etl**_](https://github.com/colorfulnotion/substrate-etl)
+
+### Staking Analytics
 
 <iframe src="https://dune.com/embeds/3335920/5589273/" height="350" width="100%"></iframe>
 
@@ -145,7 +140,8 @@ more information, please visit the
 
 ## Polkadot Staking Dashboard (Nomination Pool)
 
-### View On Dune: [Polkadot Staking Dashboard (Nomination Pool)](https://dune.com/substrate/polkadot-staking-nomination-pool)
+**View On Dune:**
+[Polkadot Staking Dashboard (Nomination Pool)](https://dune.com/substrate/polkadot-staking-nomination-pool)
 
 For a specific nomination pool ID, this dashboard shows:
 
@@ -186,7 +182,8 @@ information, please visit the
 
 ## Polkadot Staking Dashboard (Pool Member)
 
-### View On Dune: [Polkadot Staking Dashboard (Pool Member)](https://dune.com/substrate/polkadot-staking-pool-member)
+**View On Dune:**
+[Polkadot Staking Dashboard (Pool Member)](https://dune.com/substrate/polkadot-staking-pool-member)
 
 For a specific nomination pool member, this dashboard shows raw data of member activity within the
 pool.

@@ -94,6 +94,8 @@ These charts offer insights into monthly Polkadot governance engagement.
 Designed for voters to quickly understand the current trend in Polkadot OpenGov and proceed to vote
 on [**Polkassembly**](https://polkadot.polkassembly.io/opengov).
 
+### Referenda Basic Information
+
 ![Preview screenshot 1](../../../assets/dune-analytics/polkadot-opengov-referenda-home_preview_1.jpeg)
 
 ### Controversial Referenda

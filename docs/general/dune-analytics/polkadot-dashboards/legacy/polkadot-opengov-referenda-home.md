@@ -22,11 +22,11 @@ If you want to see more details of each referendum, please check
 
 Authored by [**@ colorfulnotion**](https://x.com/colorfulnotion)
 
-![Preview screenshot 1](../../../assets/dune-analytics/polkadot-opengov-referenda-home_preview_1.jpeg)
+<!-- ![Preview screenshot 1](docs/assets/dune-analytics/polkadot-opengov-referenda-home_preview_1.jpeg) -->
 
 ## Controversial Referenda
 
 Select those referenda with approval ratings ranging from **0.2** to **0.8**, and consider them as
 controversial referenda.
 
-![Preview screenshot 2](../../../assets/dune-analytics/polkadot-opengov-referenda-home_preview_2.jpeg)
+<!-- ![Preview screenshot 2](docs/assets/dune-analytics/polkadot-opengov-referenda-home_preview_2.jpeg) -->
