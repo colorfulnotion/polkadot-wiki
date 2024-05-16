@@ -1,8 +1,12 @@
 ---
 id: polkadot-dashboards-governance
-title: Polkadot Dashboards Governance
-sidebar_label: Dashboards Governance
-description: Aggregated dashboards for Polkadot governance
+title: "Polkadot Dashboards: Governance"
+sidebar_label: Governance
+description:
+  This document demonstrated various Polkadot governance dashboards, offering insights into treasury
+  management, referendum outcomes, voting patterns, and OpenGov referenda. These dashboards aim to
+  enhance community engagement by simplifying access to governance information and fostering a
+  transparent decision-making environment.
 keywords: [polkadot, governance, dashboard, dune]
 slug: ../polkadot-dashboards-governance
 ---

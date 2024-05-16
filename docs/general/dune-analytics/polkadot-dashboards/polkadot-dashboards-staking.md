@@ -1,7 +1,7 @@
 ---
 id: polkadot-dashboards-staking
-title: Polkadot Dashboards Staking
-sidebar_label: Dashboards Staking
+title: "Polkadot Dashboards: Staking"
+sidebar_label: Staking
 description:
   This document demonstrated various Polkadot staking dashboards, offering insights into staking
   rewards, validator and nominator metrics, nomination pools, and pool member activities. These
