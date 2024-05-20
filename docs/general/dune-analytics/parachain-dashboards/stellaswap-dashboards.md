@@ -1,9 +1,8 @@
 ---
 id: stellaswap-dashboards
-title: Hydration Dashboards
-sidebar_label: Hydration Dashboards
-description:
-  Hydration is a decentralized finance hub on Moonbeam. Its main function is a DEX.  
+title: Stellaswap Dashboards
+sidebar_label: Stellaswap Dashboards
+description: Stellaswap is the leading DEX on Moonbeam.
 keywords: [polkadot, dashboard, dune, stellaswap, DeFi, moonbeam]
 slug: ../stellaswap-dashboards
 ---
@@ -12,53 +11,56 @@ slug: ../stellaswap-dashboards
 
 ## Overview
 
-Stellaswap is the leading DEX on Moonbeam, no matter whether you measure by volume, number of pools, or accounts using it.
-It also offers liquid staking for DOT.
+Stellaswap is the leading DEX on Moonbeam, no matter whether you measure by volume, number of pools,
+or accounts using it. It also offers liquid staking for DOT.
 
-Users can swap from any asset to any other asset using an automated router that will calculate the most efficient path.
+Users can swap from any asset to any other asset using an automated router that will calculate the
+most efficient path.
 
 Liquidity providers can earn fees from the trades in the pools they provide liquidity to.
-
 
 ## Featured Dashboards on Dune
 
 Here you'll find a variety of dashboards that help visualize data from StellaSwap:
 
-- [stellaswap on Polkadot](https://dune.com/substrate/stellaswap): This dashboard provides a comprehensive
-  view of DEX volumes and liquidity on StellaSwap.
+- [stellaswap on Polkadot](https://dune.com/substrate/stellaswap): This dashboard provides a
+  comprehensive view of DEX volumes and liquidity on StellaSwap.
 
 ## Key Tables
 
-Data from the stellaswap DEX comes directly from substrate moonbeam tables: 
-`moonbeam.events`
+Data from the stellaswap DEX comes directly from substrate moonbeam tables: `moonbeam.events`
 
 ## Useful Queries
 
-Some of the most important queries for Hydration are made available as materialized views. 
+Some of the most important queries for Hydration are made available as materialized views.
 
-
-| Subject Area       | Query                                      | Materialized View                                  | Description                                                |
-|--------------------|--------------------------------------------|----------------------------------------------------|------------------------------------------------------------|
-| Stellaswap V3 Trades | [query_3661633](https://dune.com/queries/3661633) | `dune.substrate.result_stellaswap_v_3_trades`      | Trades in V3 pools, similar to dex.trades format.          |
+| Subject Area               | Query                                             | Materialized View                                  | Description                                                |
+| -------------------------- | ------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------- |
+| Stellaswap V3 Trades       | [query_3661633](https://dune.com/queries/3661633) | `dune.substrate.result_stellaswap_v_3_trades`      | Trades in V3 pools, similar to dex.trades format.          |
 | Stellaswap V3 Trades (alt) | [query_3646057](https://dune.com/queries/3646057) | `dune.substrate.result_stellaswap_v3_trades`       | Trades in V3 pools, suitable for volume and price analysis |
-| V3 Trades Enriched | [query_3656957](https://dune.com/queries/3656957) | `dune.substrate.result_stellaswap_trades_enriched` | Trades in V3 pools, with USD equivalent prices.            |
-| Stellaswap V3 Pools | [query_3639606](https://dune.com/queries/3639606) | `dune.substrate.dataset_stella_pools` (dataset)    | Master data for the pools                                  |
-The three queries presented are all very similar, but they are optimized for different use cases. 
+| V3 Trades Enriched         | [query_3656957](https://dune.com/queries/3656957) | `dune.substrate.result_stellaswap_trades_enriched` | Trades in V3 pools, with USD equivalent prices.            |
+| Stellaswap V3 Pools        | [query_3639606](https://dune.com/queries/3639606) | `dune.substrate.dataset_stella_pools` (dataset)    | Master data for the pools                                  |
 
-Each trade will provide a token0 and token1, which are the two tokens traded. The order depends on the order in the 
-pool definition (see V3 pools query). Example: for the pool WGLMR-xcDOT, WGLMR is token0 and xcDOT is token1.
-Whether someone was buying or selling GLMR can be seen by the sign of amount0. Positive means "selling", 
-negative means "buying". Only one of the first of the three queries above sorts the tokens into the right order. 
+The three queries presented are all very similar, but they are optimized for different use cases.
 
-The other queries keep token0 and token1 in the order in which they appear in the raw data, which also makes it 
-easier to aggregate for the price and volume.
+Each trade will provide a token0 and token1, which are the two tokens traded. The order depends on
+the order in the pool definition (see V3 pools query). Example: for the pool WGLMR-xcDOT, WGLMR is
+token0 and xcDOT is token1. Whether someone was buying or selling GLMR can be seen by the sign of
+amount0. Positive means "selling", negative means "buying". Only one of the first of the three
+queries above sorts the tokens into the right order.
 
-Pool master data is currently provided as a dataset directly, rather than parsed from events or from a snapshot.
-This means the latest pools added may not be included in the dataset. (Remains a work in progress.)
+The other queries keep token0 and token1 in the order in which they appear in the raw data, which
+also makes it easier to aggregate for the price and volume.
 
-Dune users are encouraged to study the source code of the queries, including parts of a query that may have been commented out for future use. 
+Pool master data is currently provided as a dataset directly, rather than parsed from events or from
+a snapshot. This means the latest pools added may not be included in the dataset. (Remains a work in
+progress.)
 
-Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use case. 
+Dune users are encouraged to study the source code of the queries, including parts of a query that
+may have been commented out for future use.
+
+Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use
+case.
 
 ## Getting Started with Queries
 
@@ -84,11 +86,12 @@ ORDER BY 1 DESC, 5 DESC
 
 ```
 
-The query calculates the last available day's volume for each token pair. It also shows which pair was used
-to calculate the USD value of the tokens involved. For example, if you trade a pair which contains USDC or USDT,
-the dollar value of the trade is just the amount of USDC or USDT traded. For other pairs, the USD value is calculated
-using another currency as an intermediate, i.e. DOT or GLMR. Any pair which does not at least have one of these
-currencies will not have a USD value calculated.
+The query calculates the last available day's volume for each token pair. It also shows which pair
+was used to calculate the USD value of the tokens involved. For example, if you trade a pair which
+contains USDC or USDT, the dollar value of the trade is just the amount of USDC or USDT traded. For
+other pairs, the USD value is calculated using another currency as an intermediate, i.e. DOT or
+GLMR. Any pair which does not at least have one of these currencies will not have a USD value
+calculated.
 
 Query result:
 

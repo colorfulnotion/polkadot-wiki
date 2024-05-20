@@ -2,8 +2,7 @@
 id: bifrost-dashboards
 title: Bifrost Dashboards
 sidebar_label: Bifrost Dashboards
-description:
-  bifrost is a decentralized finance hub and liquid staking platform.
+description: bifrost is a decentralized finance hub and liquid staking platform.
 keywords: [polkadot, dashboard, dune, bifrost, DeFi]
 slug: ../bifrost-dashboards
 ---
@@ -12,11 +11,11 @@ slug: ../bifrost-dashboards
 
 ## Overview
 
-Bifrost is a decentralized finance hub and liquid staking platform on the Polkadot network and other chains.
-Users obtain a liquid staking token, vToken, by staking their native tokens. The vToken can then be used in
-DeFi applications, such as lending, borrowing, and trading. 
+Bifrost is a decentralized finance hub and liquid staking platform on the Polkadot network and other
+chains. Users obtain a liquid staking token, vToken, by staking their native tokens. The vToken can
+then be used in DeFi applications, such as lending, borrowing, and trading.
 
-On Polkadot, users can stake DOT, ASTR, FIL, GLMR, Manta at the moment. 
+On Polkadot, users can stake DOT, ASTR, FIL, GLMR, Manta at the moment.
 
 They can also trade their vTokens in a DEX (stableswap) operating on the Bifrost parachain.
 
@@ -30,29 +29,31 @@ Here you'll find a variety of dashboards that help visualize data from the Bifro
 ## Key Tables
 
 Data from the bifrost parachain is organized into several key tables: `bifrost.balances`,
-`bifrost.blocks`, `bifrost.calls`, `bifrost.events`, `bifrost.extrinsics`, `bifrost.transfers`, `bifrost.traces`
+`bifrost.blocks`, `bifrost.calls`, `bifrost.events`, `bifrost.extrinsics`, `bifrost.transfers`,
+`bifrost.traces`
 
-The `bifrost.traces` table is created by a snapshot script utilizing Bifrost API calls to fetch accurate values
-which would be difficult to calculate from the blockchain events alone. 
+The `bifrost.traces` table is created by a snapshot script utilizing Bifrost API calls to fetch
+accurate values which would be difficult to calculate from the blockchain events alone.
 
 ## Useful Queries
 
-Some of the most important queries for Bifrost are mentioned here. 
-
+Some of the most important queries for Bifrost are mentioned here.
 
 | Subject Area       | Query                                             | Description                                                                                      |
-|--------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| ------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Liquid Staking     | [query_3571958](https://dune.com/queries/3571958) | Provides amount of vTokens and therefore tokens staked (1=1) Used HydraDX oracle for USD values. |
-| Bifrost Stableswap | [query_3532234](https://dune.com/queries/3532234) | Provides price and volume for stableswap pairs, e.g. DOT <> VDOT                                 |
+| Bifrost Stableswap | [query_3532234](https://dune.com/queries/3532234) | Provides price and volume for stableswap pairs, e.g. DOT <-> VDOT                                |
 
-Dune users are encouraged to study the source code of the queries, including parts of a query that may have been commented out for future use. 
+Dune users are encouraged to study the source code of the queries, including parts of a query that
+may have been commented out for future use.
 
-Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use case. 
+Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use
+case.
 
 ## Getting Started with Queries
 
-To get started with querying data from Bifrost, you are welcome to use the mentioned 
-queries. You can also use the following DuneSQL queries as examples:
+To get started with querying data from Bifrost, you are welcome to use the mentioned queries. You
+can also use the following DuneSQL queries as examples:
 
 ```sql title="Bifrost Loan Market Data" showLineNumbers
 WITH A AS(
@@ -87,12 +88,11 @@ order by 1 DESC
 
 ```
 
-The query is fairly typical for a parachain query on Dune. It parses events from the `bifrost.events` table, 
-and calculates the aggregate values for each hour.
+The query is fairly typical for a parachain query on Dune. It parses events from the
+`bifrost.events` table, and calculates the aggregate values for each hour.
 
 The query uses Dune's native UINT256 type, which allows to deal with very large numbers and still
-maintain precision. 
-
+maintain precision.
 
 Query result:
 
