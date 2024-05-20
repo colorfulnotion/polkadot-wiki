@@ -1,7 +1,7 @@
 ---
 id: bifrost-dashboards
 title: Bifrost Dashboards
-sidebar_label: Bifrost Dashboards
+sidebar_label: Bifrost
 description: bifrost is a decentralized finance hub and liquid staking platform.
 keywords: [polkadot, dashboard, dune, bifrost, DeFi]
 slug: ../bifrost-dashboards

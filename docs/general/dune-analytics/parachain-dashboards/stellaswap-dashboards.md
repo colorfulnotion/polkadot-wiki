@@ -1,7 +1,7 @@
 ---
 id: stellaswap-dashboards
 title: Stellaswap Dashboards
-sidebar_label: Stellaswap Dashboards
+sidebar_label: Stellaswap (Moonbeam)
 description: Stellaswap is the leading DEX on Moonbeam.
 keywords: [polkadot, dashboard, dune, stellaswap, DeFi, moonbeam]
 slug: ../stellaswap-dashboards

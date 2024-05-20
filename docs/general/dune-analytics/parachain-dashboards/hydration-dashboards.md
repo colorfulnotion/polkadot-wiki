@@ -1,9 +1,8 @@
 ---
 id: hydration-dashboards
 title: Hydration Dashboards
-sidebar_label: Hydration Dashboards
-description:
-  Hydration is a decentralized finance hub on Polkadot. Its main function is a DEX.  
+sidebar_label: Hydration
+description: Hydration is a decentralized finance hub on Polkadot. Its main function is a DEX.
 keywords: [polkadot, dashboard, dune, hydration, DeFi]
 slug: ../hydration-dashboards
 ---
@@ -12,58 +11,67 @@ slug: ../hydration-dashboards
 
 ## Overview
 
-Hydration, formerly known as HydraDX, is a decentralized finance hub on Polkadot. It offers several types of DEX pools:
+Hydration, formerly known as HydraDX, is a decentralized finance hub on Polkadot. It offers several
+types of DEX pools:
 
-* Omnipool: a single liquidity pool for assets that have been vetted by governance. Typically, these would be currencies
- that have existed for a while and are expected to generate a high volume of trades.
-* Stable pools: pools where all coins in the same pool are expected to trade almost at the same price, e.g. USDC/USDT.
-* xyk-pools: pools where the price of the assets is determined by the x * y = k formula, also known as the constant product formula.
+- Omnipool: a single liquidity pool for assets that have been vetted by governance. Typically, these
+  would be currencies that have existed for a while and are expected to generate a high volume of
+  trades.
+- Stable pools: pools where all coins in the same pool are expected to trade almost at the same
+  price, e.g. USDC/USDT.
+- xyk-pools: pools where the price of the assets is determined by the x \* y = k formula, also known
+  as the constant product formula.
 
-Users can swap from any asset to any other asset using an automated router that will calculate the most efficient path.
+Users can swap from any asset to any other asset using an automated router that will calculate the
+most efficient path.
 
 Liquidity providers can earn fees from the trades in the pools they provide liquidity to.
-
 
 ## Featured Dashboards on Dune
 
 Here you'll find a variety of dashboards that help visualize data from the Hydration parachain:
 
-- [hydration on Polkadot](https://dune.com/substrate/hydradx): This dashboard provides a comprehensive
-  view of DEX volumes and liquidity on the Hydration parachain.
+- [hydration on Polkadot](https://dune.com/substrate/hydradx): This dashboard provides a
+  comprehensive view of DEX volumes and liquidity on the Hydration parachain.
 
 ## Key Tables
 
 Data from the hydration parachain is organized into several key tables: `hydradx.balances`,
-`hydradx.blocks`, `hydradx.calls`, `hydradx.events`, `hydradx.extrinsics`, `hydradx.transfers`, `hydradx.traces`
+`hydradx.blocks`, `hydradx.calls`, `hydradx.events`, `hydradx.extrinsics`, `hydradx.transfers`,
+`hydradx.traces`
 
-The `hydradx.traces` table is created by a snapshot script utilizing Hydration API calls to fetch accurate values
-which would be difficult to calculate from the blockchain events alone. 
+The `hydradx.traces` table is created by a snapshot script utilizing Hydration API calls to fetch
+accurate values which would be difficult to calculate from the blockchain events alone.
 
 ## Useful Queries
 
-Some of the most important queries for Hydration are made available as materialized views. 
+Some of the most important queries for Hydration are made available as materialized views.
 
+| Subject Area        | Query                                             | Materialized View                                 | Description                                                                          |
+| ------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Oracle              | [query_3459562](https://dune.com/queries/3459562) | `dune.substrate.result_hydradx_oracle`            | Provides hourly oracle values for all currencies present in the omnipool. Uses LRNA. |
+| Oracle (Alt.)       | [query_3573146](https://dune.com/queries/3573146) | `dune.substrate.result_hydra_dx_oracle_new`       | Provides hourly oracle values for all currencies present in the omnipool. Uses DOT.  |
+| Oracle (Alt. Daily) | [query_3445402](https://dune.com/queries/3445402) | `dune.substrate.result_hydra_dx_oracle_new_daily` | Same, but aggregated daily.                                                          |
+| Oracle Pairs        | [query_3483707](https://dune.com/queries/3483707) | `dune.substrate.result_hydra_dx_oracle_pairs`     | Provides volume and transaction counts for all pairwise trades in the omnipool.      |
+| Omnipool Liquidity  | [query_3507194](https://dune.com/queries/3507194) | `dune.substrate.result_hydradx_liquidity_master`  | Provides liquidity in the Omnipool on a per-account basis.                           |
+| Assets              | [query_3482301](https://dune.com/queries/3482301) | N/A                                               | Provides asset_id, symbol, and decimals for all assets in the Hydration parachain.   |
 
-| Subject Area        | Query                                      | Materialized View                                 | Description                                                                                      |
-|---------------------|--------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| Oracle              | [query_3459562](https://dune.com/queries/3459562) | `dune.substrate.result_hydradx_oracle`            | Provides hourly oracle values for all currencies present in the omnipool. Uses LRNA.             |
-| Oracle (Alt.)       | [query_3573146](https://dune.com/queries/3573146) | `dune.substrate.result_hydra_dx_oracle_new`       | Provides hourly oracle values for all currencies present in the omnipool. Uses DOT.              |
-| Oracle (Alt. Daily) | [query_3445402](https://dune.com/queries/3445402) | `dune.substrate.result_hydra_dx_oracle_new_daily` | Same, but aggregated daily.              |
-| Oracle Pairs        | [query_3483707](https://dune.com/queries/3483707) | `dune.substrate.result_hydra_dx_oracle_pairs`     | Provides volume and transaction counts for all pairwise trades in the omnipool.                |
-| Omnipool Liquidity  | [query_3507194](https://dune.com/queries/3507194) | `dune.substrate.result_hydradx_liquidity_master`  | Provides liquidity in the Omnipool on a per-account basis.                                      |
-| Assets              | [query_3482301](https://dune.com/queries/3482301) | N/A                                               | Provides asset_id, symbol, and decimals for all assets in the Hydration parachain.             |
+The first Oracle query is the recommended one to use for any oracle use cases that are not
+historical in nature. This is because it relies on the most reliable mechanism for determining the
+actual price, using the intermediate LRNA token price. This level of detail is only available from
+Jan. 2024 onwards.
 
-The first Oracle query is the recommended one to use for any oracle use cases that are not historical in nature. This is because it relies on the most
-reliable mechanism for determining the actual price, using the intermediate LRNA token price. This level of detail is only available from Jan. 2024 onwards.
+For historical price analysis, the alternative oracle query uses DOT as the intermediate currency.
+It may be slightly less accurate and take a bit longer to calculate.
 
-For historical price analysis, the alternative oracle query uses DOT as the intermediate currency. It may be slightly less 
-accurate and take a bit longer to calculate.
+Liquidity in the Omnipool is calculated on a per-account basis, using the NFT positions that
+represent shares in the Omnipool.
 
-Liquidity in the Omnipool is calculated on a per-account basis, using the NFT positions that represent shares in the Omnipool.
+Dune users are encouraged to study the source code of the queries, including parts of a query that
+may have been commented out for future use.
 
-Dune users are encouraged to study the source code of the queries, including parts of a query that may have been commented out for future use. 
-
-Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use case. 
+Uncommenting these parts may accelerate your effort of adopting a query to a slightly different use
+case.
 
 ## Getting Started with Queries
 
@@ -95,7 +103,7 @@ WITH MaxTimestamps AS (
     JOIN query_3482301 A1 on A1.asset_id=m.asset_id
     WHERE t.track='omniasset'
 )
-SELECT 
+SELECT
 asset_id,
 ticker,
 round(100.0 * hubReserve / (sum(hubReserve) OVER(ORDER BY 1)), 1) as percentage_of_pool,
@@ -111,11 +119,11 @@ ORDER BY 3 DESC
 
 ```
 
-The query is fairly typical for a parachain query on Dune. It calculates the last available values from the snapshot table `hydradx.traces`.
+The query is fairly typical for a parachain query on Dune. It calculates the last available values
+from the snapshot table `hydradx.traces`.
 
-The query uses Dune's native UINT256 type extensively, which allows to deal with very large numbers and still
-maintain precision. 
-
+The query uses Dune's native UINT256 type extensively, which allows to deal with very large numbers
+and still maintain precision.
 
 Query result:
 
