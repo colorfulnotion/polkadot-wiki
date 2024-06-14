@@ -80,11 +80,11 @@ module.exports = {
             {
               type: "category",
               label: "Dune Analytics",
-              description: "Dune Analytics descriptions",
+              description: "Dashboards in Dune Analytics created by Colorful Notion.",
               link: {
                 type: 'generated-index',
                 title: 'Dune Analytics',
-                description: "Dune Analytics descriptions",
+                description: "Dashboards in Dune Analytics created by Colorful Notion.",
                 slug: 'general/dune-analytics',
               },
               items: [
@@ -92,11 +92,11 @@ module.exports = {
                 {
                   type: "category",
                   label: "Polkadot Dashboards",
-                  description: "Polkadot Dashboards descriptions",
+                  description: "Polkadot dashboards, including overview, governance, staking, and network analysis.",
                   link: {
                     type: 'generated-index',
                     title: 'Polkadot Dashboards',
-                    description: "Polkadot is a flagship project by Web3 Foundation, designed to enable a completely decentralized web where users are in control. It is a sharded multichain network, meaning it can process many transactions on several chains in parallel, improving scalability.",
+                    description: "Polkadot dashboards, including overview, governance, staking, and network analysis.",
                     slug: 'general/dune-analytics/polkadot-dashboards',
                   },
                   items: [
@@ -109,22 +109,28 @@ module.exports = {
                 {
                   type: "category",
                   label: "Parachain Dashboards",
-                  description: "Parachain Dashboards descriptions",
+                  description: "In-depth analysis dashboards for each specific parachain within the Polkadot ecosystem.",
                   link: {
                     type: 'generated-index',
                     title: 'Parachain Dashboards',
-                    description: "Parachain Dashboards descriptions",
+                    description: "In-depth analysis dashboards for each specific parachain within the Polkadot ecosystem.",
                     slug: 'general/dune-analytics/parachain-dashboards',
                   },
                   items: [
-                    "general/dune-analytics/parachain-dashboards/assethub-dashboards",
-                    "general/dune-analytics/parachain-dashboards/unique-dashboards",
-                    "general/dune-analytics/parachain-dashboards/moonbeam-dashboards",
-                    "general/dune-analytics/parachain-dashboards/stellaswap-dashboards",
                     "general/dune-analytics/parachain-dashboards/acala-dashboards",
-                    "general/dune-analytics/parachain-dashboards/interlay-dashboards",
+                    "general/dune-analytics/parachain-dashboards/assethub-dashboards",
+                    "general/dune-analytics/parachain-dashboards/astar-dashboards",
                     "general/dune-analytics/parachain-dashboards/bifrost-dashboards",
+                    "general/dune-analytics/parachain-dashboards/collectives-dashboards",
                     "general/dune-analytics/parachain-dashboards/hydration-dashboards",
+                    "general/dune-analytics/parachain-dashboards/interlay-dashboards",
+                    "general/dune-analytics/parachain-dashboards/invarch-dashboards",
+                    "general/dune-analytics/parachain-dashboards/manta-dashboards",
+                    "general/dune-analytics/parachain-dashboards/moonbeam-dashboards",
+                    "general/dune-analytics/parachain-dashboards/neuroweb-dashboards",
+                    "general/dune-analytics/parachain-dashboards/polimec-dashboards",
+                    "general/dune-analytics/parachain-dashboards/stellaswap-dashboards",
+                    "general/dune-analytics/parachain-dashboards/unique-dashboards",
                   ],
                 },
                 "general/dune-analytics/dunesql-cheatsheet",
