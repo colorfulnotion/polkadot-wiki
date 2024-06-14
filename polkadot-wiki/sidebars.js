@@ -135,6 +135,7 @@ module.exports = {
                     "general/dune-analytics/parachain-dashboards/unique-dashboards",
                   ],
                 },
+                "general/dune-analytics/project-dashboards",
                 "general/dune-analytics/dunesql-cheatsheet",
               ],
             },
