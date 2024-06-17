@@ -1,7 +1,7 @@
 ---
 id: phala-dashboards
 title: Phala Dashboards
-sidebar_label: Phala Dashboards
+sidebar_label: Phala
 description:
   Phala is a parachain on Polkadot that provides a privacy-preserving computation and data
   protection framework. It allows for the processing of sensitive data with guaranteed privacy.

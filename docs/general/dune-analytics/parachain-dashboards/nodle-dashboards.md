@@ -1,7 +1,7 @@
 ---
 id: nodle-dashboards
 title: Nodle Dashboards
-sidebar_label: Nodle Dashboards
+sidebar_label: Nodle
 description:
   Nodle is a parachain on Polkadot focused on providing connectivity and data liquidity for the
   Internet of Things (IoT). It enables devices to securely connect, interact, and transact with

@@ -1,7 +1,7 @@
 ---
 id: coretime-dashboards
 title: Coretime Dashboards
-sidebar_label: Coretime Dashboards
+sidebar_label: Coretime
 description:
   Coretime is a parachain on Polkadot that focuses on time-stamping and data certification,
   providing a decentralized and secure mechanism for verifying data integrity.
@@ -42,50 +42,51 @@ Currently, no specific queries have been provided. Please check back later for u
 To get started with querying data from Unique, you are welcome to use the mentioned materialized
 queries. You can use the following DuneSQL queries as examples:
 
-```sql title="Kusama Coretime Core Task" showLineNumbers
+```sql title="Kusama Coretime Core Statistics" showLineNumbers
 WITH
-  max_time AS (
+  core_sta as (
     SELECT
-      max(block_time) as max_bt,
-      CAST(JSON_EXTRACT_SCALAR(data, '$[0]') AS BIGINT) as core_id
+      block_time,
+      get_href (
+        'https://nodle.subscan.io/extrinsic/' || cast(extrinsic_id as VARCHAR),
+        extrinsic_id
+      ) as extrinsics_url,
+      extrinsic_id,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[0]') AS BIGINT) as sale_start,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[1]') AS BIGINT) as leadin_length,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[2]') AS BIGINT) / pow(10, 12) as start_price,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[3]') AS BIGINT) / pow(10, 12) as regular_price,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[4]') AS BIGINT) as region_begin,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[5]') AS BIGINT) as region_end,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[6]') AS BIGINT) as ideal_cores_sold,
+      CAST(JSON_EXTRACT_SCALAR(data, '$[7]') AS BIGINT) as cores_offered,
+      CAST(
+        ROW_NUMBER() OVER (
+          ORDER BY
+            block_time ASC
+        ) AS BIGINT
+      ) AS sale_round
     FROM
       coretime_kusama.events
     WHERE
       section = 'broker'
-      AND method = 'CoreAssigned'
-    GROUP BY
-      CAST(JSON_EXTRACT_SCALAR(data, '$[0]') AS BIGINT)
+      AND method = 'SaleInitialized'
   )
 SELECT
-  block_time,
+  *,
   get_href (
-    concat(
-      'https://coretime-kusama.subscan.io/extrinsic/',
-      cast(extrinsic_id as VARCHAR)
-    ),
-    extrinsic_id
-  ) as extrinsics_url,
-  extrinsic_id,
-  CAST(JSON_EXTRACT_SCALAR(data, '$[0]') AS BIGINT) as core_id,
-  CAST(
-    JSON_EXTRACT_SCALAR(data, '$[2][0][0].task') AS BIGINT
-  ) as task,
-  chain_name
+    'https://dune.com/substrate/kusama-coretime-sales-history?sale_round=' || cast(sale_round as VARCHAR),
+    cast(sale_round as VARCHAR)
+  ) as sale_round_url
 FROM
-  coretime_kusama.events
-  LEFT JOIN max_time on max_time.core_id = CAST(JSON_EXTRACT_SCALAR(data, '$[0]') AS BIGINT)
-  LEFT JOIN query_3765180 as parachain on parachain.chain_id = CAST(
-    JSON_EXTRACT_SCALAR(data, '$[2][0][0].task') AS BIGINT
-  )
-WHERE
-  section = 'broker'
-  AND method = 'CoreAssigned'
-  AND block_time = max_bt
+  core_sta
+ORDER BY
+  block_time DESC
 ```
 
 Query result:
 
-<iframe src="https://dune.com/embeds/3765471/6333152/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3765036/6332449/" width="100%" height="500px" frameBorder="0"></iframe>
 
 :::info DuneSQL Referece
 
