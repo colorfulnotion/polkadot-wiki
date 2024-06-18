@@ -140,6 +140,7 @@ module.exports = {
                   ],
                 },
                 "general/dune-analytics/project-dashboards",
+                "general/dune-analytics/ingestion-status-and-dashboard-catalyst",
                 "general/dune-analytics/dunesql-cheatsheet",
               ],
             },
