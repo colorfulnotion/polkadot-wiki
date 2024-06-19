@@ -49,13 +49,13 @@ Shows the current status of all Polkadot and Parachain chains on Dune.
 
 ### Monthly Statistics
 
-<iframe src="https://dune.com/embeds/3547412/5969453/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3547412/5969453/" height="850" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3547412/6413909/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3547412/6413909/" height="850" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3547412/5969455/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3547412/5969455/" height="850" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3547412/5969231/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3547412/5969231/" height="850" width="100%"></iframe>
 
 ### Polkadot Treasury Flow
 
@@ -69,18 +69,18 @@ Shows the current status of all Polkadot and Parachain chains on Dune.
 
 ### XCM Metrics
 
-<iframe src="https://dune.com/embeds/3505658/5895044/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3505658/5895044/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3505637/5895025/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3505637/5895025/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3505658/6437879/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3505658/6437879/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3505637/6437895/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3505637/6437895/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3507786/5898797/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3507786/5898797/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3507755/5898758/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3507755/5898758/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3507786/6437902/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3507786/6437902/" height="450" width="100%"></iframe>
 
-<iframe src="https://dune.com/embeds/3507755/6437907/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3507755/6437907/" height="450" width="100%"></iframe>
