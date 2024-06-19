@@ -1,6 +1,6 @@
 ---
 id: astar-dashboards
-title: Astar Dashoboards
+title: Astar Dashboards
 sidebar_label: Astar
 description:
   Astar Network, previously known as Plasm, is a decentralized blockchain platform designed for
@@ -12,7 +12,7 @@ keywords: [polkadot, dashboard, dune, astar, dApp]
 slug: ../astar-dashboards
 ---
 
-# Astar Dashoboards
+# Astar Dashboards
 
 ## Overview
 

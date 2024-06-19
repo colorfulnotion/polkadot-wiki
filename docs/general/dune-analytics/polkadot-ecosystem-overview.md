@@ -36,7 +36,7 @@ For example, following are some of topics you might be interested in:
 
 :::
 
-### Monthly Metrics
+### Activities Metrics
 
 <iframe src="https://dune.com/embeds/3547412/5969453/" height="850" width="100%"></iframe>
 
@@ -50,7 +50,7 @@ For example, following are some of topics you might be interested in:
 
 <iframe src="https://dune.com/embeds/3386769/5684359/" height="350" width="100%"></iframe>
 
-### Polkadot Networks
+### Polkadot Network & Security
 
 <iframe src="https://dune.com/embeds/3334817/5587364/" height="350" width="100%"></iframe>
 
