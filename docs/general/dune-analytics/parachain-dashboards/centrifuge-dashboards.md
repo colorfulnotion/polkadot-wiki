@@ -77,43 +77,46 @@ To get started with querying data from Centrifuge, you are welcome to use the me
 can also use the following DuneSQL queries as examples:
 
 ```sql title="Centrifuge Loan Market Data" showLineNumbers
-with portfolio as
-(
-    select
+WITH portfolio AS (
+  SELECT
     ts,
-    cast(json_value(c.kv, 'strict $.asset_id.id') as int) as asset_id,
-    cast(json_value(c.kv, 'strict $.asset_id.pool') as bigint) as pool_id,
-    from_unixtime(cast(json_value(c.pv, 'strict $.maturity_date') as bigint)) as maturity_date,
-    (cast(json_value(c.pv, 'strict $.outstanding_interest') as uint256)) as outstanding_interest,
-    (cast(json_value(c.pv, 'strict $.outstanding_principal') as uint256)) as outstanding_principal,
-    (cast(json_value(c.pv, 'strict $.present_value') as uint256)) as present_value,
-    (cast(json_value(c.pv, 'strict $.total_borrowed') as uint256)) as total_borrowed,
-    (cast(json_value(c.pv, 'strict $.total_repaid_interest') as uint256)) as total_repaid_interest,
-    (cast(json_value(c.pv, 'strict $.total_repaid_principal') as uint256)) as total_repaid_principal,
-    (cast(json_value(c.pv, 'strict $.total_repaid_unscheduled') as uint256)) as total_repaid_unscheduled,
-    (cast(json_value(c.pv, 'strict $.pool_currency.symbol') as varchar)) as currency_symbol,
-    (cast(json_value(c.pv, 'strict $.pool_currency.decimals') as int)) as decimals,
-    (cast(json_value(c.pv, 'strict $.type') as varchar)) as type
-    --pv
-    from centrifuge.traces c
-    where track='portfolio'
+    CAST(JSON_VALUE(c.kv, 'strict $.asset_id.id') AS INT) AS asset_id,
+    CAST(JSON_VALUE(c.kv, 'strict $.asset_id.pool') AS BIGINT) AS pool_id,
+    FROM_UNIXTIME(CAST(JSON_VALUE(c.pv, 'strict $.maturity_date') AS BIGINT)) AS maturity_date,
+    CAST(JSON_VALUE(c.pv, 'strict $.outstanding_interest') AS UINT256) AS outstanding_interest,
+    CAST(JSON_VALUE(c.pv, 'strict $.outstanding_principal') AS UINT256) AS outstanding_principal,
+    CAST(JSON_VALUE(c.pv, 'strict $.present_value') AS UINT256) AS present_value,
+    CAST(JSON_VALUE(c.pv, 'strict $.total_borrowed') AS UINT256) AS total_borrowed,
+    CAST(JSON_VALUE(c.pv, 'strict $.total_repaid_interest') AS UINT256) AS total_repaid_interest,
+    CAST(JSON_VALUE(c.pv, 'strict $.total_repaid_principal') AS UINT256) AS total_repaid_principal,
+    CAST(JSON_VALUE(c.pv, 'strict $.total_repaid_unscheduled') AS UINT256) AS total_repaid_unscheduled,
+    CAST(JSON_VALUE(c.pv, 'strict $.pool_currency.symbol') AS VARCHAR) AS currency_symbol,
+    CAST(JSON_VALUE(c.pv, 'strict $.pool_currency.decimals') AS INT) AS decimals,
+    CAST(JSON_VALUE(c.pv, 'strict $.type') AS VARCHAR) AS type
+  FROM
+    centrifuge.traces c
+  WHERE
+    track = 'portfolio'
 )
-select
-ts,
-asset_id,
-pool_id,
-maturity_date,
-outstanding_interest / pow(10, decimals) as outstanding_interest,
-outstanding_principal / pow(10, decimals) as outstanding_principal,
-present_value / power(10, decimals) as present_value,
-total_borrowed / power(10, decimals) as total_borrowed,
-total_repaid_interest / power(10, decimals) as total_repaid_interest,
-total_repaid_principal / power(10, decimals) as total_repaid_principal,
-total_repaid_unscheduled / power(10, decimals) as total_repaid_unscheduled,
-currency_symbol
-from portfolio
-where type='Other'
-order by maturity_date desc
+SELECT
+  ts,
+  asset_id,
+  pool_id,
+  maturity_date,
+  outstanding_interest / POW(10, decimals) AS outstanding_interest,
+  outstanding_principal / POW(10, decimals) AS outstanding_principal,
+  present_value / POW(10, decimals) AS present_value,
+  total_borrowed / POW(10, decimals) AS total_borrowed,
+  total_repaid_interest / POW(10, decimals) AS total_repaid_interest,
+  total_repaid_principal / POW(10, decimals) AS total_repaid_principal,
+  total_repaid_unscheduled / POW(10, decimals) AS total_repaid_unscheduled,
+  currency_symbol
+FROM
+  portfolio
+WHERE
+  type = 'Other'
+ORDER BY
+  maturity_date DESC;
 
 ```
 

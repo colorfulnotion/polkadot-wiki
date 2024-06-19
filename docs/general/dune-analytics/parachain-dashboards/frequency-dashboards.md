@@ -52,14 +52,17 @@ queries. You can use the following DuneSQL queries as examples:
 SELECT
     DATE_TRUNC('day', block_time) AS day,
     section || '_' || method AS section_method,
-    count(*) AS cnt
+    COUNT(*) AS cnt
 FROM
     frequency.extrinsics
 WHERE
-    section || '_' || method IN (Select section_method from unnest(split('{{section_method}}',',')) as c(section_method))
+    section || '_' || method IN (
+        SELECT section_method
+        FROM unnest(SPLIT('{{section_method}}', ',')) AS c(section_method)
+    )
 GROUP BY
     DATE_TRUNC('day', block_time),
-    section || '_' || method
+    section || '_' || method;
 ```
 
 Query result:

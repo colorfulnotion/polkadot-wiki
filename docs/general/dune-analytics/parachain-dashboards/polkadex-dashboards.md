@@ -47,15 +47,15 @@ To get started with querying data from Snowbridge, you are welcome to use the me
 queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Polkadot BridgeHub Outbound Msg Sent To Ethereum" showLineNumbers
-select
-  date_trunc('day', block_time) as day,
-  count(method) as cnt
-from
+SELECT
+  DATE_TRUNC('day', block_time) AS day,
+  COUNT(method) AS cnt
+FROM
   polkadex.events
-where
+WHERE
   method = 'TransferredMultiAssets'
-group by
-  date_trunc('day', block_time)
+GROUP BY
+  DATE_TRUNC('day', block_time);
 ```
 
 Query result:

@@ -47,21 +47,21 @@ queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Manta to Moonbeam XTokens Transfer" showLineNumbers
 SELECT
-  DATE_TRUNC('day', block_time) as day,
+  DATE_TRUNC('day', block_time) AS day,
   SUM(
-    CAST(json_extract_scalar(params, '$.amount') as DOUBLE) / POWER(10, 18)
+    CAST(json_extract_scalar(params, '$.amount') AS DOUBLE) / POWER(10, 18)
   ) AS amount,
-  'Manta to Moonbeam' as section
+  'Manta to Moonbeam' AS section
 FROM
   manta.extrinsics
-where
+WHERE
   section = 'xTokens'
-  and method = 'transfer'
-  and json_extract_scalar(params, '$.dest.v3.interior.x2[0].parachain') = '2004'
-group by
+  AND method = 'transfer'
+  AND json_extract_scalar(params, '$.dest.v3.interior.x2[0].parachain') = '2004'
+GROUP BY
   DATE_TRUNC('day', block_time)
-order by
-  day desc
+ORDER BY
+  day DESC;
 ```
 
 Query result:

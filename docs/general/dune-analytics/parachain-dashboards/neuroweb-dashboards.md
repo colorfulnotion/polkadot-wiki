@@ -52,26 +52,26 @@ queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Neuroweb Knowledge Asset Distribution" showLineNumbers
 SELECT DISTINCT
-  get_href (
-    'https://dkg.origintrail.io/profile?wallet=' || cast(To as VARCHAR),
+  get_href(
+    'https://dkg.origintrail.io/profile?wallet=' || CAST(To AS VARCHAR),
     CONCAT(
       SUBSTR(To, 1, 4),
       '...',
       SUBSTR(To, LENGTH(To) - 3)
     )
-  ) as Holder_URL,
+  ) AS Holder_URL,
   CONCAT(
     SUBSTR(To, 1, 4),
     '...',
     SUBSTR(To, LENGTH(To) - 3)
-  ) as Holder,
-  COUNT("Token ID") as "# of Tokens"
+  ) AS Holder,
+  COUNT("Token ID") AS "# of Tokens"
 FROM
   query_3695045
 GROUP BY
   To
 ORDER BY
-  "# of Tokens" DESC
+  "# of Tokens" DESC;
 ```
 
 Query result:

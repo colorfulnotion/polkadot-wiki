@@ -69,7 +69,7 @@ GROUP BY
   collection_id_with_dashboard_url,
   token_prefix
 ORDER BY
-  SUM(for_price) DESC
+  SUM(for_price) DESC;
 ```
 
 Query result:

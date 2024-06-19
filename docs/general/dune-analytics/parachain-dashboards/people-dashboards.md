@@ -58,19 +58,17 @@ SELECT
     from_utf8(
       from_hex(JSON_EXTRACT_SCALAR(call_args, '$.info.display.raw'))
     ) AS VARCHAR
-  ) as name,
+  ) AS name,
   CAST(
     from_utf8(
-      from_hex(
-        JSON_EXTRACT_SCALAR(call_args, '$.info.email.raw')
-      )
+      from_hex(JSON_EXTRACT_SCALAR(call_args, '$.info.email.raw'))
     ) AS VARCHAR
-  ) as email
+  ) AS email
 FROM
   people_kusama.calls
 WHERE
   call_section = 'identity'
-  AND call_method = 'setIdentity'
+  AND call_method = 'setIdentity';
 ```
 
 Query result:

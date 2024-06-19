@@ -50,21 +50,21 @@ To get started with querying data from Unique, you are welcome to use the mentio
 queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Sum of USDC in Polkadot Parachains" showLineNumbers
-select
+SELECT
   *
-from
-  "query_3526956(asset_id='1337')" -- AssetHub Sum of Stablecoin on Each Chain by Time
-where
+FROM
+  "query_3526956(asset_id='1984')" -- AssetHub Sum of Stablecoin on Each Chain by Time
+WHERE
   not chain_name = ''
 ```
 
 Query result:
 
-<iframe src="https://dune.com/embeds/3527830/5933830/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3527846/5933854" height="350" width="100%"></iframe>
 
 Visualized result:
 
-<iframe src="https://dune.com/embeds/3527830/5933863/" height="350" width="100%"></iframe>
+<iframe src="https://dune.com/embeds/3527846/6451568" height="350" width="100%"></iframe>
 
 :::info DuneSQL Referece
 

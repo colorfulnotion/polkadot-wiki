@@ -37,6 +37,8 @@ Data from the Phala parachain is organized into several key tables:
 - `phala.extrinsics`
 - `phala.transfers`
 
+Additional curated dataset from Phala team can be found at `dune.phala_network.*`
+
 ## Useful Queries
 
 Currently, no specific queries have been provided. Please check back later for updates.
@@ -60,7 +62,7 @@ SELECT
   budget_per_share,
   delegator_count
 FROM
-  dune.phala_network.dataset_phala_computation
+  dune.phala_network.dataset_phala_computation;
 ```
 
 Query result:
