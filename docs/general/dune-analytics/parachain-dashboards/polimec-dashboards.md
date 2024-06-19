@@ -25,8 +25,14 @@ Here you'll find a variety of dashboards that help visualize data from the Moonb
 
 ## Key Tables
 
-Data from the polimec parachain is organized into several key tables: `polimec.balances`,
-`polimec.blocks`, `polimec.calls`, `polimec.events`, `polimec.extrinsics`, `polimec.transfers`.
+Data from the polimec parachain is organized into several key tables:
+
+- `polimec.balances`
+- `polimec.blocks`
+- `polimec.calls`
+- `polimec.events`,
+- `polimec.extrinsics`
+- `polimec.transfers`
 
 ## Useful Queries
 

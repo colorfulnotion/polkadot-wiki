@@ -28,8 +28,14 @@ Please also visit our dashboards for Phala on
 
 ## Key Tables
 
-Data from the Phala parachain is organized into several key tables: `phala.balances`,
-`phala.blocks`, `phala.calls`, `phala.events`, `phala.extrinsics`, `phala.transfers`
+Data from the Phala parachain is organized into several key tables:
+
+- `phala.balances`
+- `phala.blocks`
+- `phala.calls`
+- `phala.events`,
+- `phala.extrinsics`
+- `phala.transfers`
 
 ## Useful Queries
 

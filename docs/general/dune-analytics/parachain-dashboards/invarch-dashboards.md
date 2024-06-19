@@ -29,8 +29,14 @@ Here you'll find a variety of dashboards that help visualize data from the Acala
 
 ## Key Tables
 
-Data from the InvArch parachain is organized into several key tables: `invarch.balances`,
-`invarch.blocks`, `invarch.calls`, `invarch.events`, `invarch.extrinsics`, `invarch.transfers`
+Data from the InvArch parachain is organized into several key tables:
+
+- `invarch.balances`
+- `invarch.blocks`
+- `invarch.calls`
+- `invarch.events`,
+- `invarch.extrinsics`
+- `invarch.transfers`
 
 ## Useful Queries
 

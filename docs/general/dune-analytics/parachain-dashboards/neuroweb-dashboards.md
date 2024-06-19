@@ -31,8 +31,14 @@ Here you'll find a variety of dashboards that help visualize data from the Neuro
 
 ## Key Tables
 
-Data from the NeuroWeb parachain is organized into several key tables: `neuroweb.balances`,
-`neuroweb.blocks`, `neuroweb.calls`, `neuroweb.events`, `neuroweb.extrinsics`, `neuroweb.transfers`.
+Data from the NeuroWeb parachain is organized into several key tables:
+
+- `neuroweb.balances`
+- `neuroweb.blocks`
+- `neuroweb.calls`
+- `neuroweb.events`,
+- `neuroweb.extrinsics`
+- `neuroweb.transfers`
 
 ## Useful Queries
 

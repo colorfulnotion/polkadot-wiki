@@ -31,8 +31,14 @@ Here you'll find a variety of dashboards that help visualize data from the Liten
 
 ## Key Tables
 
-Data from the Litentry parachain is organized into several key tables: `litentry.balances`,
-`litentry.blocks`, `litentry.calls`, `litentry.events`, `litentry.extrinsics`, `litentry.transfers`.
+Data from the Litentry parachain is organized into several key tables:
+
+- `litentry.balances`
+- `litentry.blocks`
+- `litentry.calls`
+- `litentry.events`,
+- `litentry.extrinsics`
+- `litentry.transfers`
 
 ## Useful Queries
 

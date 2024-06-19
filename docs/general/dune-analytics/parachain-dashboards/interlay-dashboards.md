@@ -39,9 +39,14 @@ Here you'll find a variety of dashboards that help visualize data from the Inter
 
 ## Key Tables
 
-Data from the interlay parachain is organized into several key tables: `interlay.balances`,
-`interlay.blocks`, `interlay.calls`, `interlay.events`, `interlay.extrinsics`, `interlay.transfers`,
-`interlay.traces`
+Data from the interlay parachain is organized into several key tables:
+
+- `interlay.balances`
+- `interlay.blocks`
+- `interlay.calls`
+- `interlay.events`,
+- `interlay.extrinsics`
+- `interlay.transfers`
 
 The `interlay.traces` table is created by a snapshot script utilizing Interlay API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.

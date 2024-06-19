@@ -27,8 +27,14 @@ Here you'll find a variety of dashboards that help visualize data from the Manta
 
 ## Key Tables
 
-Data from the manta parachain is organized into several key tables: `manta.balances`,
-`manta.blocks`, `manta.calls`, `manta.events`, `manta.extrinsics`, `manta.transfers`
+Data from the manta parachain is organized into several key tables:
+
+- `manta.balances`
+- `manta.blocks`
+- `manta.calls`
+- `manta.events`,
+- `manta.extrinsics`
+- `manta.transfers`
 
 ## Useful Queries
 

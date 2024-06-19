@@ -30,8 +30,14 @@ Please also visit our dashboards for Nodle on
 
 ## Key Tables
 
-Data from the Nodle parachain is organized into several key tables: `nodle.balances`,
-`nodle.blocks`, `nodle.calls`, `nodle.events`, `nodle.extrinsics`, `nodle.transfers`
+Data from the Nodle parachain is organized into several key tables:
+
+- `nodle.balances`
+- `nodle.blocks`
+- `nodle.calls`
+- `nodle.events`,
+- `nodle.extrinsics`
+- `nodle.transfers`
 
 ## Useful Queries
 

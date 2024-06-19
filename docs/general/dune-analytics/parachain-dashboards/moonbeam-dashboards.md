@@ -29,8 +29,14 @@ Here you'll find a variety of dashboards that help visualize data from the Moonb
 
 ## Key Tables
 
-Data from the Moonbeam parachain is organized into several key tables: `moonbeam.balances`,
-`moonbeam.blocks`, `moonbeam.calls`, `moonbeam.events`, `moonbeam.extrinsics`, `moonbeam.transfers`
+Data from the Moonbeam parachain is organized into several key tables:
+
+- `moonbeam.balances`
+- `moonbeam.blocks`
+- `moonbeam.calls`
+- `moonbeam.events`,
+- `moonbeam.extrinsics`
+- `moonbeam.transfers`
 
 ## Useful Queries
 

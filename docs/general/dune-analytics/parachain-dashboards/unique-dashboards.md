@@ -32,8 +32,14 @@ Please also visit our dashboards for Unique on
 
 ## Key Tables
 
-Data from the Unique parachain is organized into several key tables: `unique.balances`,
-`unique.blocks`, `unique.calls`, `unique.events`, `unique.extrinsics`, `unique.transfers`
+Data from the Unique parachain is organized into several key tables:
+
+- `unique.balances`
+- `unique.blocks`
+- `unique.calls`
+- `unique.events`,
+- `unique.extrinsics`
+- `unique.transfers`
 
 ## Useful Queries
 

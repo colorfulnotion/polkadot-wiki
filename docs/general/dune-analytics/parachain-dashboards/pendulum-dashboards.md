@@ -30,8 +30,14 @@ Please also visit our dashboards for Pendulum on
 
 ## Key Tables
 
-Data from the Pendulum parachain is organized into several key tables: `pendulum.balances`,
-`pendulum.blocks`, `pendulum.calls`, `pendulum.events`, `pendulum.extrinsics`, `pendulum.transfers`
+Data from the Pendulum parachain is organized into several key tables:
+
+- `pendulum.balances`
+- `pendulum.blocks`
+- `pendulum.calls`
+- `pendulum.events`,
+- `pendulum.extrinsics`
+- `pendulum.transfers`
 
 ## Useful Queries
 

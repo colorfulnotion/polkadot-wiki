@@ -30,9 +30,14 @@ Please also visit our dashboards for Frequency on
 
 ## Key Tables
 
-Data from the Frequency parachain is organized into several key tables: `frequency.balances`,
-`frequency.blocks`, `frequency.calls`, `frequency.events`, `frequency.extrinsics`,
-`frequency.transfers`
+Data from the Frequency parachain is organized into several key tables:
+
+- `frequency.balances`
+- `frequency.blocks`
+- `frequency.calls`
+- `frequency.events`,
+- `frequency.extrinsics`
+- `frequency.transfers`
 
 ## Useful Queries
 

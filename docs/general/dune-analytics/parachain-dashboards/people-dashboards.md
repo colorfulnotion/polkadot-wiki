@@ -28,8 +28,14 @@ Please also visit our dashboards for People on
 
 ## Key Tables
 
-Data from the People parachain is organized into several key tables: `people.balances`,
-`people.blocks`, `people.calls`, `people.events`, `people.extrinsics`, `people.transfers`
+Data from the People parachain is organized into several key tables:
+
+- `people.balances`
+- `people.blocks`
+- `people.calls`
+- `people.events`,
+- `people.extrinsics`
+- `people.transfers`
 
 ## Useful Queries
 

@@ -28,8 +28,14 @@ Here you'll find a variety of dashboards that help visualize data from the Polka
 
 ## Key Tables
 
-Data from the Polkadex parachain is organized into several key tables: `polkadex.balances`,
-`polkadex.blocks`, `polkadex.calls`, `polkadex.events`, `polkadex.extrinsics`, `polkadex.transfers`
+Data from the Polkadex parachain is organized into several key tables:
+
+- `polkadex.balances`
+- `polkadex.blocks`
+- `polkadex.calls`
+- `polkadex.events`,
+- `polkadex.extrinsics`
+- `polkadex.transfers`
 
 ## Useful Queries
 
