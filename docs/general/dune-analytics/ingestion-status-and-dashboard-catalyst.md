@@ -10,8 +10,9 @@ slug: ../ingestion-status-and-dashboard-catalyst
 # Ingestion Status
 
 The table below displays the onboarding status of various parachains into Dune Analytics. To date,
-over 40 publicly accessible parachains and more than 30 key dashboards have been created by
-ColorfulNotion to demonstrate the capabilities of the ingested data.
+over 40 publicly accessible parachains and more than 30+ key dashboards have been created by
+ColorfulNotion to demonstrate the
+[powerful Dune Integration](https://polkadot.network/blog/polkadot-kusama-analytics-dune).
 
 The data must flow. As a dashboard "catalyst", we eagerly anticipate seeing even more impressive
 dashboards developed by the community, leveraging this rich dataset to unlock new possibilities and

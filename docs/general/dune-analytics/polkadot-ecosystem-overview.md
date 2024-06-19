@@ -4,7 +4,7 @@ title: Polkadot Ecosystem Overview
 sidebar_label: Polkadot Ecosystem Overview
 description: High level metrics for Polkadot Ecosystem.
 keywords: [polkadot, governance, dashboard, dune]
-slug: ../basic-metrics-dashboards
+slug: ../polkadot-ecosystem-overview
 ---
 
 # Polkadot Ecosystem Overview
