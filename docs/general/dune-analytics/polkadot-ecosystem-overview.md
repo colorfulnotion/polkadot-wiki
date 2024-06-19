@@ -1,24 +1,26 @@
 ---
-id: basic-metrics-dashboards
-title: Parachain Basic Metrics Dashboards
-sidebar_label: Basic Metrics Dashboards
-description: Basic on-chain metrics of parachains on Polkadot networks
+id: polkadot-ecosystem-overview
+title: Polkadot Ecosystem Overview
+sidebar_label: Polkadot Ecosystem Overview
+description: High level metrics for Polkadot Ecosystem.
 keywords: [polkadot, governance, dashboard, dune]
 slug: ../basic-metrics-dashboards
 ---
 
-# Parachain Basic Metrics Dashboards
+# Polkadot Ecosystem Overview
 
-Parachains are specialized application-specific blockchains sharing security under the Polkadot
-Relay Chain or its sister canary network, the Kusama Relay Chain. Parachains have interoperability
-via XCM and achieve finality within a minute or two with relay chain cores verifying proofs of
-validity.
+The Polkadot ecosystem is a dynamic and evolving network that aims to enable different parachains to
+transfer messages and value in a trust-free fashion; sharing their unique features while pooling
+their security.
+
+In this overview, we provide insights to the vibrancy and growth of the Polkadot ecosystem.
+Specifically, we highlight data on active accounts, extrinsics, events, and XCMs.
 
 **View On Dune**: [Polkadot & Parachains Ecosystem Metrics](https://dune.com/substrate/polkadot)
 
 :::info
 
-This page only shows a high-level overview of parachain statuses. For an in-depth analysis, please
+This page only shows a high-level overview of the ecosystem metics. For an in-depth analysis, please
 visit [Polkadot Dashboards](dune-analytics/polkadot-dashboards) and
 [Parachain Dashboards](dune-analytics/parachain-dashboards) categories.
 
@@ -34,20 +36,7 @@ For example, following are some of topics you might be interested in:
 
 :::
 
-### Polkadot Chain Info with Sovereign Account
-
-Shows all addresses and their IDs for Polkadot and Parachains. For more information, you can visit
-[**Subscan**](https://polkadot.subscan.io/parachain).
-
-<iframe src="https://dune.com/embeds/3546915/5968403/" height="350" width="100%"></iframe>
-
-### Substrate Chains Onboarding Status
-
-Shows the current status of all Polkadot and Parachain chains on Dune.
-
-<iframe src="https://dune.com/embeds/3523887/5925917/" height="350" width="100%"></iframe>
-
-### Monthly Statistics
+### Monthly Metrics
 
 <iframe src="https://dune.com/embeds/3547412/5969453/" height="850" width="100%"></iframe>
 

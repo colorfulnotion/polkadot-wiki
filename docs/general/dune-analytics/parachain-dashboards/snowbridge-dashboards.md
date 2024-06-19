@@ -1,6 +1,6 @@
 ---
 id: snowbridge-dashboards
-title: Snowbridge Dashboards
+title: Snowbridge on BridgeHub
 sidebar_label: Snowbridge
 description: Snowbridge is a general-purpose, trustless, and decentralized bridge that connects
   Polkadot and Ethereum. This bridge facilitates communication between any Polkadot parachain and

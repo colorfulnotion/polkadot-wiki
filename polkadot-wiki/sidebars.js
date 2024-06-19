@@ -88,7 +88,8 @@ module.exports = {
                 slug: 'general/dune-analytics',
               },
               items: [
-                "general/dune-analytics/basic-metrics-dashboards",
+                "general/dune-analytics/polkadot-ecosystem-overview",
+                "general/dune-analytics/ingestion-status-and-dashboard-catalyst",
                 {
                   type: "category",
                   label: "Polkadot Dashboards",
@@ -145,7 +146,6 @@ module.exports = {
                   ],
                 },
                 "general/dune-analytics/project-dashboards",
-                "general/dune-analytics/ingestion-status-and-dashboard-catalyst",
                 "general/dune-analytics/dunesql-cheatsheet",
               ],
             },
