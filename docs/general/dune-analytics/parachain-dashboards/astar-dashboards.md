@@ -30,8 +30,14 @@ Here you'll find a variety of dashboards that help visualize data from the Astar
 
 ## Key Tables
 
-Data from the Astar parachain is organized into several key tables: `astar.balances`,
-`astar.blocks`, `astar.calls`, `astar.events`, `astar.extrinsics`, `astar.transfers`,`astar.traces`
+Data from the Astar parachain is organized into several key tables:
+
+- `astar.balances`
+- `astar.blocks`
+- `astar.calls`
+- `astar.events`,
+- `astar.extrinsics`
+- `astar.transfers`
 
 ## Useful Queries
 

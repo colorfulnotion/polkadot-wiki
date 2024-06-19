@@ -28,9 +28,14 @@ Here you'll find a variety of dashboards that help visualize data from the Bifro
 
 ## Key Tables
 
-Data from the bifrost parachain is organized into several key tables: `bifrost.balances`,
-`bifrost.blocks`, `bifrost.calls`, `bifrost.events`, `bifrost.extrinsics`, `bifrost.transfers`,
-`bifrost.traces`
+Data from the bifrost parachain is organized into several key tables:
+
+- `bifrost.balances`
+- `bifrost.blocks`
+- `bifrost.calls`
+- `bifrost.events`,
+- `bifrost.extrinsics`
+- `bifrost.transfers`
 
 The `bifrost.traces` table is created by a snapshot script utilizing Bifrost API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.

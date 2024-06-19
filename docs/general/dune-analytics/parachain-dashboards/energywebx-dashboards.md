@@ -27,9 +27,14 @@ Here you'll find a variety of dashboards that help visualize data from the Energ
 
 ## Key Tables
 
-Data from the EnergyWebX parachain is organized into several key tables: `energywebx.balances`,
-`energywebx.blocks`, `energywebx.calls`, `energywebx.events`, `energywebx.extrinsics`,
-`energywebx.transfers`
+Data from the EnergyWebX parachain is organized into several key tables:
+
+- `energywebx.balances`
+- `energywebx.blocks`
+- `energywebx.calls`
+- `energywebx.events`,
+- `energywebx.extrinsics`
+- `energywebx.transfers`
 
 ## Useful Queries
 

@@ -30,9 +30,14 @@ Here you'll find a variety of dashboards that help visualize data from the Manta
 
 ## Key Tables
 
-Data from the manta parachain is organized into several key tables: `collectives.balances`,
-`collectives.blocks`, `collectives.calls`, `collectives.events`, `collectives.extrinsics`,
-`collectives.transfers`
+Data from the manta parachain is organized into several key tables:
+
+- `collectives.balances`
+- `collectives.blocks`
+- `collectives.calls`
+- `collectives.events`,
+- `collectives.extrinsics`
+- `collectives.transfers`
 
 ## Useful Queries
 

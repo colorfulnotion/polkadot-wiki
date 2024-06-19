@@ -3,9 +3,9 @@ id: assethub-dashboards
 title: Asset Hub Dashboards
 sidebar_label: Asset Hub
 description:
-  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and management
-  of digital assets across various applications. It supports asset tokenization, trading, and
-  bridging services within the Polkadot ecosystem.
+  Asset Hub is a specialized parachain on Polkadot designed to facilitate the handling and
+  management of digital assets across various applications. It supports asset tokenization, trading,
+  and bridging services within the Polkadot ecosystem.
 keywords: [polkadot, dashboard, dune, assethub, digital assets]
 slug: ../assethub-dashboards
 ---
@@ -27,8 +27,14 @@ Here you'll find a variety of dashboards that help visualize data from the Asset
 
 ## Key Tables
 
-Data from the Asset Hub parachain is organized into several key tables: `assethub.balances`,
-`assethub.blocks`, `assethub.calls`, `assethub.events`, `assethub.extrinsics`, `assethub.transfers`
+Data from the Asset Hub parachain is organized into several key tables:
+
+- `assethub.balances`
+- `assethub.blocks`
+- `assethub.calls`
+- `assethub.events`,
+- `assethub.extrinsics`
+- `assethub.transfers`
 
 ## Useful Queries
 
