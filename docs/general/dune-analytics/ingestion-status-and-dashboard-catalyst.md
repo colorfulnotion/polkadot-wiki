@@ -1,7 +1,7 @@
 ---
 id: ingestion-status-and-dashboard-catalyst
-title: Onbording Status
-sidebar_label: Onbording Status
+title: Onbording Status & Key Dashboards
+sidebar_label: Onbording Status & Key Dashboards
 description: Polkadot & Parachains Onbording status
 keywords: [dashboard, dune, sql, dunesql]
 slug: ../ingestion-status-and-dashboard-catalyst
