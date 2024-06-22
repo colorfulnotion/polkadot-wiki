@@ -36,6 +36,15 @@ Data from the Polkadex parachain is organized into several key tables:
 - `polkadex.extrinsics`
 - `polkadex.transfers`
 
+## Useful Queries
+
+Some of the most important queries for Polkadex are mentioned here.
+
+| Title                                            | Query                                             | Description                                                                                                                                      |
+| ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Polkadex BridgeHub Outbound Msg Sent To Ethereum | [query_3830615](https://dune.com/queries/3830615) | This query retrieves data on outbound messages sent from the Polkadex BridgeHub to Ethereum.                                                     |
+| Polkadex<->AssetHub Table                        | [query_3824637](https://dune.com/queries/3824637) | This query provides a comprehensive overview of the assets transferred between Polkadex and AssetHub, including the amount, symbol, and section. |
+
 ## Getting Started with Queries
 
 To get started with querying data from Snowbridge, you are welcome to use the mentioned materialized

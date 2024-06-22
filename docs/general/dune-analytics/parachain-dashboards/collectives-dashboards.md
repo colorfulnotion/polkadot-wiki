@@ -38,6 +38,18 @@ Data from the manta parachain is organized into several key tables:
 - `collectives.extrinsics`
 - `collectives.transfers`
 
+## Useful Queries
+
+<!-- [Collectives Core Member Events](https://dune.com/queries/3799229)
+[Collective Fellowship Referenda](https://dune.com/queries/3776581) -->
+
+Some of the most important queries for Collectives are mentioned here.
+
+| Title                           | Query                                             | Description                                                                                                                                        |
+| ------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Collectives Core Member Events  | [query_3799229](https://dune.com/queries/3799229) | Provides details on events involving core members of Collectives.                                                                                  |
+| Collective Fellowship Referenda | [query_3776581](https://dune.com/queries/3776581) | Offers comprehensive data on Collective fellowship referenda, covering vote counts (Ayes, BareAyes, Nays), current status, and type of referendum. |
+
 ## Getting Started with Queries
 
 To get started with querying data from Collectives, you are welcome to use the mentioned

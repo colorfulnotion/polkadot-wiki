@@ -3,8 +3,8 @@ id: manta-dashboards
 title: Manta Dashboards
 sidebar_label: Manta
 description:
-  Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain
-  compliance identities.
+  Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain compliance
+  identities.
 keywords: [polkadot, dashboard, dune, manta]
 slug: ../manta-dashboards
 ---
@@ -13,9 +13,9 @@ slug: ../manta-dashboards
 
 ## Overview
 
-Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain
-compliance identities. Its suite of core products and technologies, including zkNFTs, staking, and
-ecosystem projects, offers user-friendly access to powerful ZK-enabled use cases.
+Manta Atlantic is a fast and decentralized ZK Layer 1 supporting modular on-chain compliance
+identities. Its suite of core products and technologies, including zkNFTs, staking, and ecosystem
+projects, offers user-friendly access to powerful ZK-enabled use cases.
 
 ## Featured Dashboards on Dune
 
@@ -34,6 +34,16 @@ Data from the manta parachain is organized into several key tables:
 - `manta.events`,
 - `manta.extrinsics`
 - `manta.transfers`
+
+## Useful Queries
+
+[Manta Delegator All events](https://dune.com/queries/3722522)
+
+Some of the most important queries for Manta are mentioned here.
+
+| Title                      | Query                                             | Description                                                                                                                                                             |
+| -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Manta Delegator All events | [query_3722522](https://dune.com/queries/3722522) | This query provides a comprehensive overview of all events related to Delegator activities on the Manta network, including collator, delegator, amount, and event type. |
 
 ## Getting Started with Queries
 

@@ -36,6 +36,20 @@ Data from the Frequency parachain is organized into several key tables:
 - `frequency.extrinsics`
 - `frequency.transfers`
 
+## Useful Queries
+
+Some of the most important queries for Frequency are mentioned here.
+
+[Frequency Schema List (Off-chain Payload)](https://dune.com/queries/3781175)
+[Frequency Schema List](https://dune.com/queries/3760992)
+[Frequency MSA Count](https://dune.com/queries/3820268)
+
+| Title                                     | Query                                             | Description                                                                   |
+| ----------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Frequency Schema List (Off-chain Payload) | [query_3781175](https://dune.com/queries/3781175) | Provides a list of schemas used in the off-chain payload of Frequency.        |
+| Frequency Schema List                     | [query_3760992](https://dune.com/queries/3760992) | Lists the schemas used in Frequency.                                          |
+| Frequency MSA Count                       | [query_3820268](https://dune.com/queries/3820268) | Displays the count of Message Source Accounts (MSAs) extrinsics in Frequency. |
+
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

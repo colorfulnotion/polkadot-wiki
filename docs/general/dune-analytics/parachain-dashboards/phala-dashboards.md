@@ -2,9 +2,7 @@
 id: phala-dashboards
 title: Phala Dashboards
 sidebar_label: Phala
-description:
-  Phala provides a privacy-preserving computation and data
-  protection framework. 
+description: Phala provides a privacy-preserving computation and data protection framework.
 keywords: [polkadot, dashboard, dune, phala, privacy]
 slug: ../phala-dashboards
 ---
@@ -38,6 +36,15 @@ Data from the Phala parachain is organized into several key tables:
 - `phala.transfers`
 
 Additional curated dataset from Phala team can be found at `dune.phala_network.*`
+
+## Useful Queries
+
+Some of the most important queries for Phala are mentioned here.
+
+| Title                           | Query                                             | Description                                                                                                                                                                                  |
+| ------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Phala Computation               | [query_3619434](https://dune.com/queries/3619434) | This query provides an overview of the Phala network's computation, including circulation, bridge, reward, issuance, supply, value, worker count, rewards, APR, budget, and delegator count. |
+| Phala Recent AI Agent Contracts | [query_3743294](https://dune.com/queries/3743294) | This query lists the recent AI agent contracts deployed on the Phala network, including deployer, instantiation time, code hash, stake, and staker.                                          |
 
 ## Getting Started with Queries
 

@@ -34,6 +34,15 @@ Data from the EnergyWebX parachain is organized into several key tables:
 - `energywebx.extrinsics`
 - `energywebx.transfers`
 
+## Useful Queries
+
+Some of the most important queries for EnergyWebX are mentioned here.
+
+| Title                           | Query                                             | Description                                                                    |
+| ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| EnergyWebX Solutions and Groups | [query_3810095](https://dune.com/queries/3810095) | Provides a list of solutions and groups created within the EnergyWebX network. |
+| EnergyWebX Operators and Worker | [query_3813780](https://dune.com/queries/3813780) | Displays a list of operators and workers connected to the EnergyWebX network.  |
+
 ## Getting Started with Queries
 
 To get started with querying data from Snowbridge, you are welcome to use the mentioned materialized

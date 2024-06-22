@@ -14,10 +14,10 @@ slug: ../astar-dashboards
 
 ## Overview
 
-Astar Network, previously known as Plasm, is a blockchain platform designed for Web3.
-It is compatible with both EVM (Ethereum Virtual Machine) and WebAssembly, enabling seamless
-interaction between the two environments. Developers can participate in the Build2Earn program to
-earn rewards by creating decentralized applications.
+Astar Network, previously known as Plasm, is a blockchain platform designed for Web3. It is
+compatible with both EVM (Ethereum Virtual Machine) and WebAssembly, enabling seamless interaction
+between the two environments. Developers can participate in the Build2Earn program to earn rewards
+by creating decentralized applications.
 
 ## Featured Dashboards on Dune
 
@@ -36,6 +36,16 @@ Data from the Astar parachain is organized into several key tables:
 - `astar.events`,
 - `astar.extrinsics`
 - `astar.transfers`
+
+## Useful Queries
+
+Some of the most important queries for Astar are mentioned here.
+
+| Title                    | Query                                             | Description                                                                                                                                                                                                                                                                                              |
+| ------------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Astar dApp Info by Era   | [query_3727264](https://dune.com/queries/3727264) | This query provides comprehensive information on decentralized applications (dApps) within the Astar ecosystem, including details about the dApp name, staking statistics, tier levels, and developer profiles, facilitating deeper insights into dApp performance and engagement across different eras. |
+| Astar Reward Info by Era | [query_3727888](https://dune.com/queries/3727888) | Explore comprehensive data on rewards distribution within the Astar network, broken down by era to identify trends and patterns.                                                                                                                                                                         |
+| Astar Staker info by Era | [query_3728048](https://dune.com/queries/3728048) | Access a detailed breakdown of staker activities and statistics on the Astar network, categorized by era for historical comparison.                                                                                                                                                                      |
 
 ## Getting Started with Queries
 

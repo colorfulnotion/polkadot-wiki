@@ -38,6 +38,14 @@ Data from the Nodle parachain is organized into several key tables:
 - `nodle.extrinsics`
 - `nodle.transfers`
 
+## Useful Queries
+
+Some of the most important queries for Nodle are mentioned here.
+
+| Title              | Query                                             | Description                                                                 |
+| ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------- |
+| Nodle Mint Uniques | [query_3753531](https://dune.com/queries/3753531) | This query retrieves data on Unique NFTs minted within the Nodle ecosystem. |
+
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized

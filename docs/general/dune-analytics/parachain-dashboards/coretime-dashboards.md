@@ -38,6 +38,14 @@ Data from the Coretime parachain is organized into several key tables:
 - `coretime.extrinsics`
 - `coretime.transfers`
 
+## Useful Queries
+
+Some of the most important queries for Coretime are mentioned here.
+
+| Title                           | Query                                             | Description                                                                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Kusama Coretime Core Statistics | [query_3765036](https://dune.com/queries/3765036) | This query provides detailed statistics on Coretime sales activities on the Kusama network, including sale start time, lead-in length, start and regular prices, region details, cores sold, and more. |
+
 ## Getting Started with Queries
 
 To get started with querying data from Unique, you are welcome to use the mentioned materialized
