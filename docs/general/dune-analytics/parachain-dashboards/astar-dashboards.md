@@ -33,9 +33,10 @@ Data from the Astar parachain is organized into several key tables:
 - `astar.balances`
 - `astar.blocks`
 - `astar.calls`
-- `astar.events`,
+- `astar.events`
 - `astar.extrinsics`
 - `astar.transfers`
+- `astar.traces`
 
 ## Useful Queries
 
@@ -53,31 +54,17 @@ To get started with querying data from Astar, you are welcome to use the mention
 queries. You can use the following DuneSQL queries as examples:
 
 ```sql title="Astar EVM Executed" showLineNumbers
-WITH
-    decimals_for_each_symbol AS (
-            SELECT
-                symbol,
-                MAX(decimals) AS decimals
-            FROM
-                acala.transfers
-            WHERE
-                symbol IS NOT NULL
-            GROUP BY
-                symbol
-        )
 SELECT
-    b.asset,
-    b.symbol,
-    d.decimals
+    block_number, extrinsic_id, event_id, extrinsic_hash, section, method,
+    json_extract_scalar(data, '$[0]') as tx_from,
+    json_extract_scalar(data, '$[1]') as tx_to,
+    json_extract_scalar(data, '$[2]') as tx_hash,
+    json_extract(data, '$[3]') as tx_success
 FROM
-    acala.balances b
-LEFT JOIN decimals_for_each_symbol d ON b.symbol = d.symbol
-GROUP BY
-    b.asset,
-    b.symbol,
-    d.decimals
-ORDER BY
-    SUM(b.free + b.reserved + b.misc_frozen + b.frozen) DESC
+    astar.events
+WHERE
+    block_time >= TIMESTAMP '2024-02-13 00:00:00' and (section = 'ethereum' and method = 'Executed')
+limit 10000;
 ```
 
 Query result:
