@@ -38,6 +38,9 @@ Data from the Coretime parachain is organized into several key tables:
 - `coretime.extrinsics`
 - `coretime.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=coretime).
+
 ## Useful Queries
 
 Some useful queries for Coretime are provided:

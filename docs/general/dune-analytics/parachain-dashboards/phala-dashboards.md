@@ -35,6 +35,9 @@ Data from the Phala parachain is organized into several key tables:
 - `phala.extrinsics`
 - `phala.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=phala).
+
 Additional curated dataset from Phala team can be found at `dune.phala_network.*`
 
 ## Useful Queries

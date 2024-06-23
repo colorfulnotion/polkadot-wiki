@@ -35,6 +35,9 @@ Data from the Moonbeam parachain is organized into several key tables:
 - `moonbeam.extrinsics`
 - `moonbeam.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=moonbeam).
+
 ## Useful Queries
 
 Some useful queries for Moonbeam are provided:

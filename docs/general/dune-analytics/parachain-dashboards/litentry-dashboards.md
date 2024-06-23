@@ -37,6 +37,9 @@ Data from the Litentry parachain is organized into several key tables:
 - `litentry.extrinsics`
 - `litentry.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=litentry).
+
 ## Useful Queries
 
 Some useful queries for Litentry are provided:

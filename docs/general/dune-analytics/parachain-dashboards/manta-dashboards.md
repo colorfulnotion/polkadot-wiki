@@ -35,6 +35,9 @@ Data from the manta parachain is organized into several key tables:
 - `manta.extrinsics`
 - `manta.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=manta).
+
 ## Useful Queries
 
 [Manta Delegator All events](https://dune.com/queries/3722522)

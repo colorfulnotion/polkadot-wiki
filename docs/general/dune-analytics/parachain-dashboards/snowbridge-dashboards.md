@@ -40,6 +40,9 @@ Data from the Snowbridge protocol is organized into several key tables:
 - `bridgehub.extrinsics`
 - `bridgehub.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=bridgehub).
+
 ## Useful Queries
 
 Some useful queries for Snowbridge are provided:

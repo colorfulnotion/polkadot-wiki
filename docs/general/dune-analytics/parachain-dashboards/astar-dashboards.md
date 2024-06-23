@@ -38,6 +38,9 @@ Data from the Astar parachain is organized into several key tables:
 - `astar.transfers`
 - `astar.traces`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=astar).
+
 ## Useful Queries
 
 Some useful queries for Astar are provided:

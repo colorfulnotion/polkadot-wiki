@@ -35,6 +35,9 @@ Data from the NeuroWeb parachain is organized into several key tables:
 - `neuroweb.extrinsics`
 - `neuroweb.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=neuroweb).
+
 ## Useful Queries
 
 Some useful queries for Neuroweb are provided:

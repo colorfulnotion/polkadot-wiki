@@ -36,6 +36,9 @@ Data from the People parachain is organized into several key tables:
 - `people.extrinsics`
 - `people.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=people).
+
 ## Useful Queries
 
 Some useful queries for People are provided:

@@ -38,6 +38,9 @@ Data from the InvArch parachain is organized into several key tables:
 - `invarch.extrinsics`
 - `invarch.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=invarch).
+
 ## Useful Queries
 
 Some useful queries for InvArch are provided:

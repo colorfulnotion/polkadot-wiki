@@ -28,7 +28,7 @@ Here you will find a variety of dashboards that help visualize data from StellaS
 
 ## Key Tables
 
-Data from the stellaswap DEX comes directly from substrate moonbeam tables: `moonbeam.events`
+Data from the stellaswap DEX is sourced directly from substrate moonbeam tables: `moonbeam.events`
 
 ## Useful Queries
 

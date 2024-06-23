@@ -32,6 +32,9 @@ Data from the Acala parachain is organized into several key tables:
 - `acala.extrinsics`
 - `acala.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=acala).
+
 ## Useful Queries
 
 Some useful queries for Acala are provided:

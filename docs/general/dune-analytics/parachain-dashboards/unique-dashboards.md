@@ -39,6 +39,9 @@ Data from the Unique parachain is organized into several key tables:
 - `unique.extrinsics`
 - `unique.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=unique).
+
 ## Useful Queries
 
 Some useful queries for Unique are provided:

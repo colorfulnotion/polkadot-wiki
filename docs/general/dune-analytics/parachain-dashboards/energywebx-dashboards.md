@@ -34,6 +34,9 @@ Data from the EnergyWebX parachain is organized into several key tables:
 - `energywebx.extrinsics`
 - `energywebx.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=energywebx).
+
 ## Useful Queries
 
 Some useful queries for EnergyWebX are provided:

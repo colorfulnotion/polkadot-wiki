@@ -39,6 +39,9 @@ Data from the BridgeHub parachain is organized into several key tables:
 - `bridgehub.extrinsics`
 - `bridgehub.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=bridgehub).
+
 ## Useful Queries
 
 Some useful queries for Bridgehub are provided:

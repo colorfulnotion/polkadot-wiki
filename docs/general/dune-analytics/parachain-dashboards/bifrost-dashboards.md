@@ -40,6 +40,9 @@ Data from the bifrost parachain is organized into several key tables:
 The `bifrost.traces` table is created by a snapshot script utilizing Bifrost API calls to fetch
 accurate values which would be difficult to calculate from the blockchain events alone.
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=bifrost).
+
 ## Useful Queries
 
 Some useful queries for Bifrost are provided:

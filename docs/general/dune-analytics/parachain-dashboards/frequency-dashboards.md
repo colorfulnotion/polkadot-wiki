@@ -36,6 +36,9 @@ Data from the Frequency parachain is organized into several key tables:
 - `frequency.extrinsics`
 - `frequency.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=frequency).
+
 ## Useful Queries
 
 Some useful queries for Frequency are provided:

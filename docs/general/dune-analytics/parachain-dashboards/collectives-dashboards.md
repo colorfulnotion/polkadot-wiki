@@ -38,10 +38,10 @@ Data from the manta parachain is organized into several key tables:
 - `collectives.extrinsics`
 - `collectives.transfers`
 
-## Useful Queries
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=collectives).
 
-<!-- [Collectives Core Member Events](https://dune.com/queries/3799229)
-[Collective Fellowship Referenda](https://dune.com/queries/3776581) -->
+## Useful Queries
 
 Some useful queries for Collectives are provided:
 

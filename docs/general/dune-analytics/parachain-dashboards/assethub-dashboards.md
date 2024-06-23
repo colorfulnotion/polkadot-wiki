@@ -35,6 +35,9 @@ Data from the Asset Hub parachain is organized into several key tables:
 - `assethub.extrinsics`
 - `assethub.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=assethub).
+
 ## Useful Queries
 
 Some useful queries for Asset Hub are provided:

@@ -36,6 +36,9 @@ Data from the Polkadex parachain is organized into several key tables:
 - `polkadex.extrinsics`
 - `polkadex.transfers`
 
+Start building your own queries using granular data on Dune
+[here](https://dune.com/queries?category=canonical&namespace=polkadex).
+
 ## Useful Queries
 
 Some useful queries for Polkadex are provided:
