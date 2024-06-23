@@ -34,13 +34,13 @@ Data from the Coretime parachain is organized into several key tables:
 - `coretime.balances`
 - `coretime.blocks`
 - `coretime.calls`
-- `coretime.events`,
+- `coretime.events`
 - `coretime.extrinsics`
 - `coretime.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Coretime are mentioned here.
+Some useful queries for Coretime are provided:
 
 | Title                           | Query                                             | Description                                                                                                                                                                                            |
 | ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -42,7 +42,7 @@ Data from the interlay parachain is organized into several key tables:
 - `interlay.balances`
 - `interlay.blocks`
 - `interlay.calls`
-- `interlay.events`,
+- `interlay.events`
 - `interlay.extrinsics`
 - `interlay.transfers`
 
@@ -51,7 +51,7 @@ accurate values which would be difficult to calculate from the blockchain events
 
 ## Useful Queries
 
-Some of the most important queries for Interlay are made available as materialized views.
+Some useful queries for Interlay are made available as materialized views.
 
 | Subject Area     | Query                                             | Materialized View                               | Description                                                                |
 | ---------------- | ------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------- |

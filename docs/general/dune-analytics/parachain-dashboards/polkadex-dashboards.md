@@ -32,18 +32,18 @@ Data from the Polkadex parachain is organized into several key tables:
 - `polkadex.balances`
 - `polkadex.blocks`
 - `polkadex.calls`
-- `polkadex.events`,
+- `polkadex.events`
 - `polkadex.extrinsics`
 - `polkadex.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Polkadex are mentioned here.
+Some useful queries for Polkadex are provided:
 
-| Title                                            | Query                                             | Description                                                                                                                                      |
-| ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Polkadex BridgeHub Outbound Msg Sent To Ethereum | [query_3830615](https://dune.com/queries/3830615) | This query retrieves data on outbound messages sent from the Polkadex BridgeHub to Ethereum.                                                     |
-| Polkadex<->AssetHub Table                        | [query_3824637](https://dune.com/queries/3824637) | This query provides a comprehensive overview of the assets transferred between Polkadex and AssetHub, including the amount, symbol, and section. |
+| Title                          | Query                                             | Description                                                                                                                                                |
+| ------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Polkadex MultiAssets Transfers | [query_3830615](https://dune.com/queries/3830615) | Daily count of 'TransferredMultiAssets' observed on Polkadex parachain                                                                                     |
+| Polkadex<->AssetHub Table      | [query_3824637](https://dune.com/queries/3824637) | This query provides a comprehensive overview of the assets transferred between Polkadex parachain and AssetHub, including the amount, symbol, and section. |
 
 ## Getting Started with Queries
 

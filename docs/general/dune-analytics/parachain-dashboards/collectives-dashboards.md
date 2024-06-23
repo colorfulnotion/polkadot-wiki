@@ -34,7 +34,7 @@ Data from the manta parachain is organized into several key tables:
 - `collectives.balances`
 - `collectives.blocks`
 - `collectives.calls`
-- `collectives.events`,
+- `collectives.events`
 - `collectives.extrinsics`
 - `collectives.transfers`
 
@@ -43,7 +43,7 @@ Data from the manta parachain is organized into several key tables:
 <!-- [Collectives Core Member Events](https://dune.com/queries/3799229)
 [Collective Fellowship Referenda](https://dune.com/queries/3776581) -->
 
-Some of the most important queries for Collectives are mentioned here.
+Some useful queries for Collectives are provided:
 
 | Title                           | Query                                             | Description                                                                                                                                        |
 | ------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |

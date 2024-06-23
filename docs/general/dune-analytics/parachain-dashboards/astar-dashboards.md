@@ -40,7 +40,7 @@ Data from the Astar parachain is organized into several key tables:
 
 ## Useful Queries
 
-Some of the most important queries for Astar are mentioned here.
+Some useful queries for Astar are provided:
 
 | Title                    | Query                                             | Description                                                                                                                                                                                                                                                                                              |
 | ------------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

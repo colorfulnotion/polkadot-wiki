@@ -33,13 +33,13 @@ Data from the Litentry parachain is organized into several key tables:
 - `litentry.balances`
 - `litentry.blocks`
 - `litentry.calls`
-- `litentry.events`,
+- `litentry.events`
 - `litentry.extrinsics`
 - `litentry.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Litentry are mentioned here.
+Some useful queries for Litentry are provided:
 
 | Title                               | Query                                             | Description                                      |
 | ----------------------------------- | ------------------------------------------------- | ------------------------------------------------ |

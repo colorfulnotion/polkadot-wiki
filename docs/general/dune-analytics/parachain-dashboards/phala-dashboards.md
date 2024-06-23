@@ -31,7 +31,7 @@ Data from the Phala parachain is organized into several key tables:
 - `phala.balances`
 - `phala.blocks`
 - `phala.calls`
-- `phala.events`,
+- `phala.events`
 - `phala.extrinsics`
 - `phala.transfers`
 
@@ -39,7 +39,7 @@ Additional curated dataset from Phala team can be found at `dune.phala_network.*
 
 ## Useful Queries
 
-Some of the most important queries for Phala are mentioned here.
+Some useful queries for Phala are provided:
 
 | Title                           | Query                                             | Description                                                                                                                                                                                  |
 | ------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

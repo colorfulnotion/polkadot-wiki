@@ -34,13 +34,13 @@ Data from the Nodle parachain is organized into several key tables:
 - `nodle.balances`
 - `nodle.blocks`
 - `nodle.calls`
-- `nodle.events`,
+- `nodle.events`
 - `nodle.extrinsics`
 - `nodle.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Nodle are mentioned here.
+Some useful queries for Nodle are provided:
 
 | Title              | Query                                             | Description                                                                 |
 | ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------- |

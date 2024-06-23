@@ -33,7 +33,7 @@ Data from the bifrost parachain is organized into several key tables:
 - `bifrost.balances`
 - `bifrost.blocks`
 - `bifrost.calls`
-- `bifrost.events`,
+- `bifrost.events`
 - `bifrost.extrinsics`
 - `bifrost.transfers`
 
@@ -42,7 +42,7 @@ accurate values which would be difficult to calculate from the blockchain events
 
 ## Useful Queries
 
-Some of the most important queries for Bifrost are mentioned here.
+Some useful queries for Bifrost are provided:
 
 | Subject Area       | Query                                             | Description                                                                                      |
 | ------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

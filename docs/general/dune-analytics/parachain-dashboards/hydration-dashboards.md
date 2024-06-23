@@ -41,7 +41,7 @@ Data from the hydration parachain is organized into several key tables:
 - `hydradx.balances`
 - `hydradx.blocks`
 - `hydradx.calls`
-- `hydradx.events`,
+- `hydradx.events`
 - `hydradx.extrinsics`
 - `hydradx.transfers`
 
@@ -50,7 +50,7 @@ accurate values which would be difficult to calculate from the blockchain events
 
 ## Useful Queries
 
-Some of the most important queries for Hydration are made available as materialized views.
+Some useful queries for Hydration are made available as materialized views.
 
 | Subject Area        | Query                                             | Materialized View                                 | Description                                                                          |
 | ------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ |

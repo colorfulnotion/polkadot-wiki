@@ -34,13 +34,13 @@ Data from the InvArch parachain is organized into several key tables:
 - `invarch.balances`
 - `invarch.blocks`
 - `invarch.calls`
-- `invarch.events`,
+- `invarch.events`
 - `invarch.extrinsics`
 - `invarch.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for InvArch are mentioned here.
+Some useful queries for InvArch are provided:
 
 | Title                                   | Query                                             | Description                                                                                                                                                                           |
 | --------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

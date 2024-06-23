@@ -31,13 +31,13 @@ Data from the Moonbeam parachain is organized into several key tables:
 - `moonbeam.balances`
 - `moonbeam.blocks`
 - `moonbeam.calls`
-- `moonbeam.events`,
+- `moonbeam.events`
 - `moonbeam.extrinsics`
 - `moonbeam.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Moonbeam are mentioned here.
+Some useful queries for Moonbeam are provided:
 
 | Title                     | Query                                             | Description                                                                                                                                                |
 | ------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -35,13 +35,13 @@ Data from the BridgeHub parachain is organized into several key tables:
 - `bridgehub.balances`
 - `bridgehub.blocks`
 - `bridgehub.calls`
-- `bridgehub.events`,
+- `bridgehub.events`
 - `bridgehub.extrinsics`
 - `bridgehub.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Bridgehub are mentioned here.
+Some useful queries for Bridgehub are provided:
 
 | Title                          | Query                                               | Description                                          |
 | ------------------------------ | --------------------------------------------------- | ---------------------------------------------------- |

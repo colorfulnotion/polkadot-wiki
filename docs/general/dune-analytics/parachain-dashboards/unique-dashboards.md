@@ -35,13 +35,13 @@ Data from the Unique parachain is organized into several key tables:
 - `unique.balances`
 - `unique.blocks`
 - `unique.calls`
-- `unique.events`,
+- `unique.events`
 - `unique.extrinsics`
 - `unique.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Unique are mentioned here.
+Some useful queries for Unique are provided:
 
 | Title                               | Query                                             | Description                                 |
 | ----------------------------------- | ------------------------------------------------- | ------------------------------------------- |

@@ -30,13 +30,13 @@ Data from the EnergyWebX parachain is organized into several key tables:
 - `energywebx.balances`
 - `energywebx.blocks`
 - `energywebx.calls`
-- `energywebx.events`,
+- `energywebx.events`
 - `energywebx.extrinsics`
 - `energywebx.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for EnergyWebX are mentioned here.
+Some useful queries for EnergyWebX are provided:
 
 | Title                           | Query                                             | Description                                                                    |
 | ------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |

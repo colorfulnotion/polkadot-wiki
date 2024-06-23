@@ -31,13 +31,13 @@ Data from the Asset Hub parachain is organized into several key tables:
 - `assethub.balances`
 - `assethub.blocks`
 - `assethub.calls`
-- `assethub.events`,
+- `assethub.events`
 - `assethub.extrinsics`
 - `assethub.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Asset Hub are mentioned here.
+Some useful queries for Asset Hub are provided:
 
 | Title                                             | Query                                                                    | Description                                      |
 | ------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------ |

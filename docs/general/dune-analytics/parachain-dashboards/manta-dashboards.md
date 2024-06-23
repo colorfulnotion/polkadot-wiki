@@ -31,7 +31,7 @@ Data from the manta parachain is organized into several key tables:
 - `manta.balances`
 - `manta.blocks`
 - `manta.calls`
-- `manta.events`,
+- `manta.events`
 - `manta.extrinsics`
 - `manta.transfers`
 
@@ -39,7 +39,7 @@ Data from the manta parachain is organized into several key tables:
 
 [Manta Delegator All events](https://dune.com/queries/3722522)
 
-Some of the most important queries for Manta are mentioned here.
+Some useful queries for Manta are provided:
 
 | Title                      | Query                                             | Description                                                                                                                                                             |
 | -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -32,7 +32,7 @@ Data from the stellaswap DEX comes directly from substrate moonbeam tables: `moo
 
 ## Useful Queries
 
-Some of the most important queries for Hydration are made available as materialized views.
+Some useful queries for Hydration are made available as materialized views.
 
 | Subject Area               | Query                                             | Materialized View                                  | Description                                                |
 | -------------------------- | ------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------- |

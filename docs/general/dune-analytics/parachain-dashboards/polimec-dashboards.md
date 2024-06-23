@@ -28,13 +28,13 @@ Data from the polimec parachain is organized into several key tables:
 - `polimec.balances`
 - `polimec.blocks`
 - `polimec.calls`
-- `polimec.events`,
+- `polimec.events`
 - `polimec.extrinsics`
 - `polimec.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Polimec are mentioned here.
+Some useful queries for Polimec are provided:
 
 | Title                              | Query                                             | Description                                                           |
 | ---------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------- |

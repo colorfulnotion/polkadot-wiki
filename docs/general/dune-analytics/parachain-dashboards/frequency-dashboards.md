@@ -32,13 +32,13 @@ Data from the Frequency parachain is organized into several key tables:
 - `frequency.balances`
 - `frequency.blocks`
 - `frequency.calls`
-- `frequency.events`,
+- `frequency.events`
 - `frequency.extrinsics`
 - `frequency.transfers`
 
 ## Useful Queries
 
-Some of the most important queries for Frequency are mentioned here.
+Some useful queries for Frequency are provided:
 
 [Frequency Schema List (Off-chain Payload)](https://dune.com/queries/3781175)
 [Frequency Schema List](https://dune.com/queries/3760992)

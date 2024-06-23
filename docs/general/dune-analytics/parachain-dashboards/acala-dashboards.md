@@ -34,9 +34,7 @@ Data from the Acala parachain is organized into several key tables:
 
 ## Useful Queries
 
-Some of the most important queries for Acala are mentioned here.
-
-Here are enhanced descriptions for the table entries:
+Some useful queries for Acala are provided:
 
 | Title                                            | Query                                             | Description                                                                               |
 | ------------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
